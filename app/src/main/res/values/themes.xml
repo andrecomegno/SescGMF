@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SescGMF" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/black</item>>
+    </style>
+
+    <style name="Theme.SescGMF" parent="Base.Theme.SescGMF" />
+</resources>

@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">SescGMF</string>
+    <string name="hi_good_morning">Hi, good morning !</string>
+    <string name="access_my_training">Access My Training</string>
+    <string name="your_routine">Your Routine</string>
+    <string name="consecutive_training_weeks">Consecutive training weeks</string>
+    <string name="engagement_with_training">Engagement with training</string>
+    <string name="low">LOW</string>
+    <string name="home_training">Home training</string>
+    <string name="home">home</string>
+    <string name="lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
+    <string name="training">Training</string>
+    <string name="profile">profile</string>
+    <string name="setting">setting</string>
 </resources>

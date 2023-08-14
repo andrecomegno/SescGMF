@@ -15,14 +15,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintDimensionRatio="16:9"/>
+        app:layout_constraintDimensionRatio="16:9" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/logo"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/panel_top">
 
@@ -38,7 +37,7 @@
         android:id="@+id/txt_hello"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:text="Olá, Bom dia !"
+        android:text="@string/hi_good_morning"
         android:textColor="@color/gray"
         android:textSize="20sp"
         android:layout_margin="10dp"
@@ -66,36 +65,47 @@
         app:layout_constraintStart_toStartOf="@id/panel_top"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/txt_incentive"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="12dp"
+        android:text="@string/lets_start_your_day_by_training"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row" />
+
     <androidx.cardview.widget.CardView
-        android:id="@+id/training_tip"
+        android:id="@+id/training_tip_01"
         android:layout_width="180dp"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/row" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/training_tip2"
+        android:id="@+id/training_tip_02"
         android:layout_width="180dp"
         android:layout_height="100dp"
         android:layout_marginEnd="-20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/training_tip"
+        app:layout_constraintStart_toEndOf="@+id/training_tip_01"
         app:layout_constraintTop_toBottomOf="@+id/row" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_training"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginTop="110dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/backgroud_button"
-        android:text="Acessar Meu Treino"
+        android:text="@string/access_my_training"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/row2"
@@ -105,7 +115,7 @@
         android:id="@+id/row2"
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="250dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintStart_toStartOf="@id/panel_top"
         app:layout_constraintTop_toBottomOf="@+id/row" />
@@ -115,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:text="Sua Rotina"
+        android:text="@string/your_routine"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -129,7 +139,7 @@
         android:layout_margin="10dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="56dp"
-        android:text="Semana de treino consecutivos"
+        android:text="@string/consecutive_training_weeks"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/row3"
@@ -166,7 +176,7 @@
         android:layout_height="0dp"
         android:layout_margin="10dp"
         android:layout_marginTop="8dp"
-        android:text="Engajamento com o treino"
+        android:text="@string/engagement_with_training"
         android:textColor="@color/black"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -179,7 +189,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_margin="10dp"
-        android:text="BAIXO"
+        android:text="@string/low"
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -190,17 +200,131 @@
         android:id="@+id/row4"
         android:layout_width="match_parent"
         android:layout_height="10dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-40dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintBottom_toTopOf="@+id/footer"
         app:layout_constraintStart_toStartOf="@id/panel_top"
         app:layout_constraintTop_toBottomOf="@+id/row2" />
 
+    <TextView
+        android:id="@+id/txt_train_home"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:text="@string/home_training"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/row4" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/train_go_home_01"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="18dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_train_home" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/train_go_home_02"
+        android:layout_width="180dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginEnd="-18dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/train_go_home_01"
+        app:layout_constraintTop_toBottomOf="@+id/txt_train_home" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/footer"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="70dp"
         app:cardBackgroundColor="@color/gray"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/menu_bt_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/home" />
+
+        <TextView
+            android:id="@+id/txt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="32dp"
+            android:text="@string/home"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/menu_bt_training"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="135dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/training" />
+
+        <TextView
+            android:id="@+id/txt_training"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="130dp"
+            android:text="@string/training"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/menu_bt_profile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="250dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/txt_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="250dp"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/menu_bt_setting"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="340dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/settings" />
+
+        <TextView
+            android:id="@+id/txt_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="337dp"
+            android:text="@string/setting"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

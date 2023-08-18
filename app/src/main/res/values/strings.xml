@@ -1,17 +1,23 @@
 <resources>
     <string name="app_name">SescGMF</string>
+    <!-- Welcome -->
     <string name="hi_good_morning">Hi, good morning !</string>
+    <string name="lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
+    <!-- Button Training -->
     <string name="access_my_training">Access My Training</string>
+    <!-- Statistic Training -->
     <string name="your_routine">Your Routine</string>
     <string name="consecutive_training_weeks">Consecutive training weeks</string>
     <string name="engagement_with_training">Engagement with training</string>
     <string name="low">LOW</string>
-    <string name="home_training">Home training</string>
+    <!-- Menu Button  -->
     <string name="home">home</string>
-    <string name="lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
     <string name="training">training</string>
     <string name="profile">profile</string>
-    <string name="setting">setting</string>
+    <string name="lesson">lesson</string>
+    <!-- TIPS -->
+    <string name="tip_01">Focus on training</string>
+    <string name="tip_02">Quality of life</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

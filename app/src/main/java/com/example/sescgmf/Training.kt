@@ -15,6 +15,8 @@ class Training : Fragment(R.layout.fragment_training)
 {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
+        super.onViewCreated(view, savedInstanceState)
+
         view.findViewById<AppCompatButton>(R.id.bt_training).setOnClickListener{
             val action = TrainingDirections.actionTrainingToHome()
             findNavController().navigate(action)

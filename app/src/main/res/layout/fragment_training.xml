@@ -6,17 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".Training">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_training"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/bt_backgroud"
-        android:text="@string/access_my_training"
-        android:textColor="@color/white"
-        android:textStyle="bold"
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TRAINING"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

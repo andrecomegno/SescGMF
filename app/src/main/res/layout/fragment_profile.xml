@@ -6,28 +6,230 @@
     android:layout_height="match_parent"
     tools:context=".Profile">
 
-    <ImageView
-        android:id="@+id/panel_top"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pl_top"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/top"
-        app:layout_constraintDimensionRatio="16:9"
+        android:layout_height="150dp"
+        app:cardBackgroundColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/im_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/profile"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="top|center"
+            app:shapeAppearanceOverlay="@style/Circular" />
+
+        <TextView
+            android:id="@+id/lb_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_username"
+            android:textColor="@color/dark_gray"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/lb_account_sesc_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_sesc"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" />
+
+    <TextView
+        android:id="@+id/lb_base_unit"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/base_unit"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_account_sesc_title" />
+
+    <TextView
+        android:id="@+id/txt_unit_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/base_unit_sesc"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lb_base_unit"
+        app:layout_constraintTop_toBottomOf="@+id/lb_account_sesc_title" />
+
+    <TextView
+        android:id="@+id/lb_registration"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/registration"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_base_unit" />
+
+    <TextView
+        android:id="@+id/txt_register_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/register_number_username"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lb_registration"
+        app:layout_constraintTop_toBottomOf="@+id/txt_unit_name" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pl_row_01"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" />
+
+    <TextView
+        android:id="@+id/lb_account_profile_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_profile"
+        android:textColor="@color/dark_gray"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_row_01" />
+
+    <TextView
+        android:id="@+id/lb_username"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/username"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_account_profile_title" />
 
     <TextView
         android:id="@+id/txt_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="André"
-        android:textColor="@color/Yellow"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/panel_top"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/register_username"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lb_username"
+        app:layout_constraintTop_toBottomOf="@+id/lb_account_profile_title" />
 
+    <TextView
+        android:id="@+id/lb_email"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:text="@string/e_mail"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lb_username" />
+
+    <TextView
+        android:id="@+id/txt_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/register_email"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/lb_email"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pl_row_02"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="120dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_row_01" />
+
+    <TextView
+        android:id="@+id/lb_title_linked_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/linked_account"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_row_02" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pl_row_03"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="95dp"
+        app:cardBackgroundColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_row_02" />
+
+    <TextView
+        android:id="@+id/lb_title_delete_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/delete_account"
+        android:textColor="@color/dark_gray"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pl_row_03" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_delete_account"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/delete_account"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/dark_gray"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/lb_title_delete_account"
+        tools:ignore="VisualLintButtonSize" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

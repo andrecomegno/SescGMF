@@ -29,11 +29,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txt_username"
+        android:id="@+id/lb_username"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_margin="12dp"
-        android:text="André"
+        android:text="@string/register_username"
         android:textColor="@color/Yellow"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_hello" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/row"
+        android:id="@+id/pl_top"
         android:layout_width="match_parent"
         android:layout_height="10dp"
         android:layout_marginTop="100dp"
@@ -58,17 +58,17 @@
         android:textColor="@color/dark_gray"
         android:textSize="15sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/row" />
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/training_tip_01"
         android:layout_width="180dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="50dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/row" >
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" >
 
         <ImageView
             android:layout_width="match_parent"
@@ -81,7 +81,7 @@
             android:text="@string/tip_01"
             android:textAlignment="center"
             android:layout_marginTop="75dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:textColor="@color/white"/>
 
     </androidx.cardview.widget.CardView>
@@ -91,11 +91,11 @@
         android:layout_width="180dp"
         android:layout_height="100dp"
         android:layout_marginTop="50dp"
-        android:layout_marginRight="15dp"
+        android:layout_marginEnd="15dp"
         app:cardBackgroundColor="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/training_tip_01"
-        app:layout_constraintTop_toBottomOf="@+id/row" >
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" >
 
         <ImageView
             android:layout_width="match_parent"
@@ -108,7 +108,7 @@
             android:text="@string/tip_02"
             android:textAlignment="center"
             android:layout_marginTop="75dp"
-            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
             android:textColor="@color/white"/>
 
     </androidx.cardview.widget.CardView>
@@ -117,15 +117,15 @@
         android:id="@+id/bt_training"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginLeft="15dp"
         android:layout_marginTop="150dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/bt_backgroud"
+        android:background="@color/Yellow"
         android:text="@string/access_my_training"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/row2"
-        app:layout_constraintTop_toBottomOf="@+id/row" />
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/row2"
@@ -133,7 +133,7 @@
         android:layout_height="10dp"
         android:layout_marginTop="360dp"
         app:cardBackgroundColor="@color/gray"
-        app:layout_constraintTop_toBottomOf="@+id/row" />
+        app:layout_constraintTop_toBottomOf="@+id/pl_top" />
 
     <TextView
         android:id="@+id/txt_routine"
@@ -160,14 +160,15 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@+id/row3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_routine" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_routine"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/txt_train_count"
         android:layout_width="wrap_content"
         android:layout_height="26dp"
         android:layout_marginTop="10dp"
-        android:text="0"
+        android:text="@string/training_weeks"
         android:textColor="@color/dark_gray"
         android:textSize="20sp"
         app:layout_constraintEnd_toStartOf="@+id/row3"
@@ -196,7 +197,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toEndOf="@+id/row3"
-        app:layout_constraintTop_toBottomOf="@+id/txt_routine" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_routine"
+        tools:ignore="SmallSp" />
 
     <TextView
         android:id="@+id/txt_train_status"

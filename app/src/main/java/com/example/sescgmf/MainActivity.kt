@@ -2,6 +2,7 @@ package com.example.sescgmf
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
@@ -16,11 +17,17 @@ class MainActivity : AppCompatActivity()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val navHostFragment =
-            supportFragmentManager.findFragmentById(R.id.frame_layout) as NavHostFragment
+        // statusBar Transparent
+        WindowCompat.setDecorFitsSystemWindows(
+            window,
+            false
+        )
+
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.frame_layout) as NavHostFragment
         navController = navHostFragment.findNavController()
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
+
     }
 }

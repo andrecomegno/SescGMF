@@ -7,5 +7,8 @@
     <color name="blue">#6D9EEB</color>
     <color name="Yellow">#FFB612</color>>
     <color name="green_water">#00B08C</color>>
+    <color name="red">#DC143C</color>
+    <color name="royal_blue">#4169E1</color>
+    <color name="hot_pink">#FF69B4</color>
 
 </resources>

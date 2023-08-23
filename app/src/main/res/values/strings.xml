@@ -32,4 +32,7 @@
     <string name="account_profile">Account Profile</string>
     <string name="register_email">andrecomegno@email.com</string>
     <string name="training_weeks">0</string>
+    <string name="arrow_left"><![CDATA[<-]]></string>
+    <string name="arrow_right"><![CDATA[->]]></string>
+    <string name="calendar_month_year">August 2023</string>
 </resources>

@@ -15,12 +15,11 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/bt_mont_left"
+            android:id="@+id/bt_month_left"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="previousMonthAction"
             android:text="@string/arrow_left"
             android:textColor="@color/dark_gray"
             android:textSize="25sp"
@@ -40,12 +39,11 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/bt_mont_right"
+            android:id="@+id/bt_month_right"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@android:color/transparent"
-            android:onClick="nextMonthAction"
             android:text="@string/arrow_right"
             android:textColor="@color/dark_gray"
             android:textSize="25sp"
@@ -132,8 +130,26 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/register_lesson"
+        android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="0dp"
+        android:layout_weight="2"/>
+
+    <Button
+        android:id="@+id/bt_new_training"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="New Event"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
 
 </LinearLayout>

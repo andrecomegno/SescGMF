@@ -36,5 +36,16 @@
         android:id="@+id/lesson"
         android:name="com.example.sescgmf.Lesson"
         android:label="lesson"
-        tools:layout="@layout/fragment_lesson" />
+        tools:layout="@layout/fragment_lesson" >
+        <action
+            android:id="@+id/action_lesson_to_weekViewActivity"
+            app:destination="@id/weekViewActivity"
+            app:popUpTo="@id/weekViewActivity"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/weekViewActivity"
+        android:name="com.example.sescgmf.WeekViewActivity"
+        android:label="fragment_week_view_activity"
+        tools:layout="@layout/fragment_week_view_activity" />
 </navigation>

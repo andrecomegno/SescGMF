@@ -3,8 +3,9 @@ package com.example.sescgmf
 import android.view.View
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import java.time.LocalDate
 
-class CalendarViewHolder(itemView: View, private val onItemListener: CalendarAdapter.OnItemListener) :
+class CalendarViewHolder(itemView: View, private val onItemListener: CalendarAdapter.OnItemListener, private val days: ArrayList<LocalDate>) :
     RecyclerView.ViewHolder(itemView), View.OnClickListener
 {
     val dayOfMonth: TextView = itemView.findViewById(R.id.cellDayText)
@@ -16,6 +17,6 @@ class CalendarViewHolder(itemView: View, private val onItemListener: CalendarAda
 
     override fun onClick(view: View)
     {
-        onItemListener.onItemClick(adapterPosition, dayOfMonth.text.toString())
+        onItemListener.onItemClick(adapterPosition, days[adapterPosition])
     }
 }

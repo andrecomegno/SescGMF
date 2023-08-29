@@ -1,24 +1,26 @@
 package com.example.sescgmf
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sescgmf.CalendarUtils.daysInMonthArray
+import com.example.sescgmf.CalendarUtils.monthYearFromDate
+import com.example.sescgmf.CalendarUtils.selectedDate
 import java.time.LocalDate
-import java.time.YearMonth
-import java.time.format.DateTimeFormatter
 
 class Lesson : Fragment(), CalendarAdapter.OnItemListener
 {
     private lateinit var monthYearText: TextView
     private lateinit var calendarRecyclerView: RecyclerView
-    private lateinit var selectedDate: LocalDate
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -26,12 +28,9 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
     ): View? {
         val view = inflater.inflate(R.layout.fragment_lesson, container, false)
         initWidgets(view)
-        selectedDate = LocalDate.now()
-        setMonthView()
         return view
     }
 
-    // CALENDARIO
     private fun initWidgets(view: View)
     {
         calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView)
@@ -39,15 +38,56 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
 
         btPreviousMonthAction(view)
         btNextMonthAction(view)
+        weeklyAction(view)
     }
 
-    // BOTOES
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?)
+    {
+        super.onViewCreated(view, savedInstanceState)
+        selectedDate = LocalDate.now()
+        setMonthView()
+    }
+
+    private fun setMonthView()
+    {
+        val selectedDate = selectedDate ?: LocalDate.now()
+        monthYearText.text = monthYearFromDate(selectedDate)
+
+        val daysInMonthNullable = daysInMonthArray(selectedDate)
+        val daysInMonth = daysInMonthNullable.filterNotNull()
+
+        val calendarAdapter = CalendarAdapter(ArrayList(daysInMonth), this)
+
+        val layoutManager: RecyclerView.LayoutManager =
+            GridLayoutManager(requireContext(), 7)
+
+        calendarRecyclerView.layoutManager = layoutManager
+        calendarRecyclerView.adapter = calendarAdapter
+    }
+
+    override fun onItemClick(position: Int, date: LocalDate?)
+    {
+        selectedDate = date
+        setMonthView()
+    }
+
+    private fun weeklyAction(view: View)
+    {
+        view.findViewById<AppCompatButton>(R.id.bt_weekly).setOnClickListener{
+            val action = LessonDirections.actionLessonToWeekViewActivity()
+            findNavController().navigate(action)
+        }
+    }
+
     private fun btPreviousMonthAction(view: View)
     {
         val button: Button = view.findViewById(R.id.bt_month_left)
         button.setOnClickListener {
-            selectedDate = selectedDate.minusMonths(1)
-            setMonthView()
+            selectedDate?.let { nonNullSelectedDate ->
+                val newDate = nonNullSelectedDate.minusMonths(1)
+                selectedDate = newDate
+                setMonthView()
+            }
         }
     }
 
@@ -55,56 +95,11 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
     {
         val button: Button = view.findViewById(R.id.bt_month_right)
         button.setOnClickListener {
-            selectedDate = selectedDate.plusMonths(1)
-            setMonthView()
-        }
-    }
-
-    private fun setMonthView()
-    {
-        monthYearText.text = monthYearFromDate(selectedDate)
-        val daysInMonth = daysInMonthArray(selectedDate)
-
-        val calendarAdapter = CalendarAdapter(daysInMonth, this)
-        val layoutManager = GridLayoutManager(requireContext(), 7)
-        calendarRecyclerView.layoutManager = layoutManager
-        calendarRecyclerView.adapter = calendarAdapter
-    }
-
-    private fun daysInMonthArray(date: LocalDate): ArrayList<String>
-    {
-        val daysInMonthArray = ArrayList<String>()
-        val yearMonth = YearMonth.from(date)
-
-        val daysInMonth = yearMonth.lengthOfMonth()
-
-        val firstOfMonth = selectedDate.withDayOfMonth(1)
-        val dayOfWeek = firstOfMonth.dayOfWeek.value
-
-        for (i in 1..42)
-        {
-            if (i <= dayOfWeek || i > daysInMonth + dayOfWeek) {
-                daysInMonthArray.add("")
-            } else {
-                daysInMonthArray.add((i - dayOfWeek).toString())
+            selectedDate?.let { nonNullSelectedDate ->
+                val newDate = nonNullSelectedDate.plusMonths(1)
+                selectedDate = newDate
+                setMonthView()
             }
-        }
-        return daysInMonthArray
-    }
-
-    private fun monthYearFromDate(date: LocalDate): String
-    {
-        val formatter = DateTimeFormatter.ofPattern("MMMM yyyy")
-        return date.format(formatter)
-    }
-
-    // MENSSAGEM QUANDO SELECIONA UMA DATA
-    override fun onItemClick(position: Int, dayText: String)
-    {
-        if (dayText != "")
-        {
-            val message = "Selected Date $dayText ${monthYearFromDate(selectedDate)}"
-            Toast.makeText(requireContext(), message, Toast.LENGTH_LONG).show()
         }
     }
 

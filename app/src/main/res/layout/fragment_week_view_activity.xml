@@ -5,26 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Lesson">
-
-    <Button
-        android:id="@+id/bt_weekly"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        android:layout_marginTop="55dp"
-        android:text="Weekly"
-        android:textColor="@color/dark_gray"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:layout_gravity="center"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
+    tools:context=".WeekViewActivity">
 
     <LinearLayout
         android:id="@+id/calendar_lesson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="55dp">
 
         <Button
             android:id="@+id/bt_month_left"
@@ -147,5 +135,21 @@
         android:layout_height="0dp"
         android:layout_weight="2"/>
 
+    <Button
+        android:id="@+id/bt_new_training"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:text="New Event"
+        android:textColor="@color/dark_gray"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"/>
 
 </LinearLayout>

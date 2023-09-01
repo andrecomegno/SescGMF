@@ -54,4 +54,6 @@ dependencies {
     implementation'androidx.navigation:navigation-ui:2.7.1'
     implementation'androidx.navigation:navigation-runtime-ktx:2.7.1'
     implementation'androidx.navigation:navigation-fragment:2.7.1'
+
+    implementation 'com.applandeo:material-calendar-view:1.9.0-rc03'
 }

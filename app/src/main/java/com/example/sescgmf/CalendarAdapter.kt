@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import java.time.LocalDate
 
 class CalendarAdapter(private val days: ArrayList<LocalDate>, private val onItemListener: OnItemListener) :
-    RecyclerView.Adapter<CalendarViewHolder>()
+RecyclerView.Adapter<CalendarViewHolder>()
 {
     interface OnItemListener
     {
@@ -18,12 +18,6 @@ class CalendarAdapter(private val days: ArrayList<LocalDate>, private val onItem
     {
         val inflater = LayoutInflater.from(parent.context)
         val view = inflater.inflate(R.layout.calendar_cell, parent, false)
-        val layoutParams = view.layoutParams
-        if (days.size > 15) { //month view
-            layoutParams.height = (parent.height * 0.166666666).toInt()
-        } else { // week view
-            layoutParams.height = parent.height
-        }
         return CalendarViewHolder(view, onItemListener, days)
     }
 

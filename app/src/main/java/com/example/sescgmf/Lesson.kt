@@ -1,18 +1,16 @@
 package com.example.sescgmf
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
-import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sescgmf.CalendarUtils.daysInMonthArray
+import com.example.sescgmf.CalendarUtils.daysInWeekArray
 import com.example.sescgmf.CalendarUtils.monthYearFromDate
 import com.example.sescgmf.CalendarUtils.selectedDate
 import java.time.LocalDate
@@ -34,50 +32,59 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
     private fun initWidgets(view: View)
     {
         calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView)
-        monthYearText = view.findViewById(R.id.calendar_month)
+        monthYearText = view.findViewById(R.id.tile_month)
 
         btPreviousMonthAction(view)
         btNextMonthAction(view)
-        weeklyAction(view)
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
         super.onViewCreated(view, savedInstanceState)
         selectedDate = LocalDate.now()
-        setMonthView()
+        setWeekView()
     }
 
-    private fun setMonthView()
+    private fun setWeekView()
     {
-        val selectedDate = selectedDate ?: LocalDate.now()
-        monthYearText.text = monthYearFromDate(selectedDate)
+        monthYearText.text = monthYearFromDate(selectedDate ?: LocalDate.now())
+        val days = daysInWeekArray(selectedDate)
 
-        val daysInMonthNullable = daysInMonthArray(selectedDate)
-        val daysInMonth = daysInMonthNullable.filterNotNull()
-
-        val calendarAdapter = CalendarAdapter(ArrayList(daysInMonth), this)
-
-        val layoutManager: RecyclerView.LayoutManager =
-            GridLayoutManager(requireContext(), 7)
-
+        val calendarAdapter = CalendarAdapter(days, this)
+        val layoutManager = GridLayoutManager(requireContext(), 7)
         calendarRecyclerView.layoutManager = layoutManager
         calendarRecyclerView.adapter = calendarAdapter
+        //setEventAdapter()
     }
 
     override fun onItemClick(position: Int, date: LocalDate?)
     {
         selectedDate = date
-        setMonthView()
+        setWeekView()
     }
 
-    private fun weeklyAction(view: View)
-    {
-        view.findViewById<AppCompatButton>(R.id.bt_weekly).setOnClickListener{
-            val action = LessonDirections.actionLessonToWeekViewActivity()
-            findNavController().navigate(action)
+    /*
+        override fun onResume()
+        {
+            super.onResume()
+            //setEventAdapter()
         }
-    }
+
+
+        private fun setEventAdapter()
+        {
+            val dailyEvents = Event.eventsForDate(CalendarUtils.selectedDate)
+            val eventAdapter = EventAdapter(requireContext(), dailyEvents)
+            eventListView.adapter = eventAdapter
+        }
+
+
+        fun newEventAction(view: View)
+        {
+            //startActivity(Intent(requireContext(), EventEditActivity::class.java))
+        }
+         */
 
     private fun btPreviousMonthAction(view: View)
     {
@@ -86,7 +93,7 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
             selectedDate?.let { nonNullSelectedDate ->
                 val newDate = nonNullSelectedDate.minusMonths(1)
                 selectedDate = newDate
-                setMonthView()
+                setWeekView()
             }
         }
     }
@@ -98,9 +105,11 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
             selectedDate?.let { nonNullSelectedDate ->
                 val newDate = nonNullSelectedDate.plusMonths(1)
                 selectedDate = newDate
-                setMonthView()
+                setWeekView()
             }
         }
     }
+
+
 
 }

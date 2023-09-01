@@ -10,45 +10,9 @@ object CalendarUtils
 {
     var selectedDate: LocalDate? = null
 
-    fun formattedDate(date: LocalDate): String {
-        val formatter = DateTimeFormatter.ofPattern("dd MMMM yyyy")
-        return date.format(formatter)
-    }
-
-    fun formattedTime(time: LocalTime): String {
-        val formatter = DateTimeFormatter.ofPattern("hh:mm:ss a")
-        return time.format(formatter)
-    }
-
     fun monthYearFromDate(date: LocalDate): String {
         val formatter = DateTimeFormatter.ofPattern("MMMM yyyy")
         return date.format(formatter)
-    }
-
-    fun daysInMonthArray(date: LocalDate): ArrayList<LocalDate?> {
-        val daysInMonthArray = ArrayList<LocalDate?>()
-        val yearMonth = YearMonth.from(date)
-
-        val daysInMonth = yearMonth.lengthOfMonth()
-
-        val firstOfMonth = selectedDate?.withDayOfMonth(1)
-        val dayOfWeek = firstOfMonth?.dayOfWeek?.value ?: 0
-
-        for (i in 1..42) {
-            if (i <= dayOfWeek || i > daysInMonth + dayOfWeek) {
-                daysInMonthArray.add(null)
-            } else {
-                val day = i - dayOfWeek
-                daysInMonthArray.add(
-                    LocalDate.of(
-                        selectedDate?.year ?: LocalDate.now().year,
-                        selectedDate?.monthValue ?: LocalDate.now().monthValue,
-                        day
-                    )
-                )
-            }
-        }
-        return daysInMonthArray
     }
 
     fun daysInWeekArray(selectedDate: LocalDate?): ArrayList<LocalDate> {
@@ -83,6 +47,4 @@ object CalendarUtils
 
         return null
     }
-
-
 }

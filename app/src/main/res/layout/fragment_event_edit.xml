@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".EventEdit">
+    tools:context=".event.EventEdit">
 
     <LinearLayout
         android:id="@+id/calendar_lesson"
@@ -77,23 +77,12 @@
 
         <TextView
             android:id="@+id/event_date"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="00/00/0000"
+            android:text="@string/select_date"
             android:layout_marginEnd="8dp"
-            android:textAlignment="textEnd"
-            android:textStyle="bold"
-            android:textColor="@color/dark_gray"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/event_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="00:00:00"
-            android:textAlignment="textStart"
+            android:textAlignment="center"
             android:textStyle="bold"
             android:textColor="@color/dark_gray"
             android:textSize="15sp" />
@@ -102,13 +91,13 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_save_event"
         android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:background="@color/green"
+        android:backgroundTint="@color/green"
         android:text="@string/bt_save"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:layout_gravity="center"
-        tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
+        tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.example.sescgmf
+package com.example.sescgmf.lesson
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,9 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.sescgmf.CalendarUtils.daysInWeekArray
-import com.example.sescgmf.CalendarUtils.monthYearFromDate
-import com.example.sescgmf.CalendarUtils.selectedDate
+import com.example.sescgmf.R
+import com.example.sescgmf.calendar.CalendarAdapter
+import com.example.sescgmf.calendar.CalendarUtils.daysInWeekArray
+import com.example.sescgmf.calendar.CalendarUtils.monthYearFromDate
+import com.example.sescgmf.calendar.CalendarUtils.selectedDate
+import com.example.sescgmf.event.Event
+import com.example.sescgmf.event.EventAdapter
 import java.time.LocalDate
 
 class Lesson : Fragment(), CalendarAdapter.OnItemListener
@@ -24,7 +28,8 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View?
+    {
         val view = inflater.inflate(R.layout.fragment_lesson, container, false)
         initWidgets(view)
         return view

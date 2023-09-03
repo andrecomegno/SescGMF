@@ -1,11 +1,11 @@
-package com.example.sescgmf
+package com.example.sescgmf.home
 
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.example.sescgmf.R
 
 class Home : Fragment(R.layout.fragment_home)
 {

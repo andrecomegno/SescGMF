@@ -1,10 +1,11 @@
-package com.example.sescgmf
+package com.example.sescgmf.profile
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.sescgmf.R
 
 class Profile : Fragment()
 {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Lesson">
+    tools:context=".lesson.Lesson">
 
     <LinearLayout
         android:id="@+id/calendar_lesson"
@@ -135,13 +135,13 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_new_event"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:backgroundTint="@color/green"
         android:text="@string/new_event"
-        android:textColor="@color/dark_gray"
+        android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_gravity="center"

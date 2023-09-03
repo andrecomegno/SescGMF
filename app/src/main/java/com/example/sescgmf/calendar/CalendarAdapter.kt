@@ -1,9 +1,10 @@
-package com.example.sescgmf
+package com.example.sescgmf.calendar
 
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.sescgmf.R
 import java.time.LocalDate
 
 class CalendarAdapter(private val days: ArrayList<LocalDate>, private val onItemListener: OnItemListener) :

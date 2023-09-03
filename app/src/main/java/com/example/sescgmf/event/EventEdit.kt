@@ -1,4 +1,4 @@
-package com.example.sescgmf
+package com.example.sescgmf.event
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,30 +9,26 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.sescgmf.CalendarUtils.formattedDate
-import com.example.sescgmf.CalendarUtils.formattedTime
-import com.example.sescgmf.CalendarUtils.selectedDate
+import com.example.sescgmf.R
+import com.example.sescgmf.calendar.CalendarUtils.formattedDate
+import com.example.sescgmf.calendar.CalendarUtils.selectedDate
 import java.time.LocalDate
 import java.time.LocalTime
 
 class EventEdit : Fragment()
 {
-    private lateinit var time : LocalTime
+    private var time : LocalTime = LocalTime.now()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val view = inflater.inflate(R.layout.fragment_event_edit, container, false)
-        initWidgets(view)
-        return view
-    }
-
-    private fun initWidgets(view: View)
+    ): View?
     {
-        eventDateTimes(view)
+        val view = inflater.inflate(R.layout.fragment_event_edit, container, false)
+        eventViewDate(view)
         btBackLesson(view)
         btSaveEvent(view)
+        return view
     }
 
     // BOTÃO SALVAR NOVO EVENTO
@@ -40,18 +36,21 @@ class EventEdit : Fragment()
     {
         // ID EDITTEXT
         val txtEventName = view.findViewById<EditText>(R.id.txt_event_name)
-        // PEGA O QUE FOI DIGITADO
-        val eventName: String = txtEventName.text.toString()
-        // ATRIBUIU AO NOVO EVENTO NOME, DATA E HORA
-        val newEvent = Event( eventName, selectedDate?: LocalDate.now(), time )
         // ID BOTAO SALVAR
         val button: Button = view.findViewById(R.id.bt_save_event)
-        // TROCA DE FRAGMENT EVENTEDIT PARA LESSON
-        val action = EventEditDirections.actionEventEditToLesson()
+
         button.setOnClickListener{
+            // PEGA O QUE FOI DIGITADO
+            val eventName: String = txtEventName.text.toString()
+
             // VERIFICACAO SE ESTA EM BRANCO
             if(txtEventName.text.isNotBlank())
             {
+                // ATRIBUIU AO NOVO EVENTO NOME, DATA E HORA
+                val newEvent = Event( eventName, selectedDate?: LocalDate.now(), time )
+                // TROCA DE FRAGMENT EVENTEDIT PARA LESSON
+                val action = EventEditDirections.actionEventEditToLesson()
+
                 // FRAGMENT LESSON
                 findNavController().navigate(action)
                 // CRIA UM NOVO EVENTO NO LESSON
@@ -75,14 +74,11 @@ class EventEdit : Fragment()
         }
     }
 
-    private fun eventDateTimes(view: View)
+    // MOSTRA A DATA SELECIONADA NA TELA
+    private fun eventViewDate(view: View)
     {
-        time = LocalTime.now()
         val eventDate: TextView = view.findViewById(R.id.event_date)
-        val eventTime: TextView = view.findViewById(R.id.event_time)
-
         eventDate.text = formattedDate(selectedDate?: LocalDate.now())
-        eventTime.text = formattedTime(time)
     }
 
 }

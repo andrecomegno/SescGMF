@@ -13,11 +13,12 @@ class MainActivity : AppCompatActivity()
 {
     private lateinit var navController: NavController
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // statusBar Transparent
+        // STATUSBAR TRANSPARENTE
         WindowCompat.setDecorFitsSystemWindows(
             window,
             false

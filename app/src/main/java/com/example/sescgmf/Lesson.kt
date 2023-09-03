@@ -5,10 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ListView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.sescgmf.CalendarUtils.daysInWeekArray
 import com.example.sescgmf.CalendarUtils.monthYearFromDate
@@ -31,13 +32,15 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
 
     private fun initWidgets(view: View)
     {
+        // CALENDARIO
         calendarRecyclerView = view.findViewById(R.id.calendarRecyclerView)
-        monthYearText = view.findViewById(R.id.tile_month)
+        monthYearText = view.findViewById(R.id.title_month)
 
-        btPreviousMonthAction(view)
-        btNextMonthAction(view)
+        // BOTÕES
+        btPreviousWeek(view)
+        btNextWeek(view)
+        btEvent(view)
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?)
     {
@@ -48,6 +51,7 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
 
     private fun setWeekView()
     {
+        // CALENDARIO SEMANAS
         monthYearText.text = monthYearFromDate(selectedDate ?: LocalDate.now())
         val days = daysInWeekArray(selectedDate)
 
@@ -55,7 +59,7 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
         val layoutManager = GridLayoutManager(requireContext(), 7)
         calendarRecyclerView.layoutManager = layoutManager
         calendarRecyclerView.adapter = calendarAdapter
-        //setEventAdapter()
+        setEventAdapter()
     }
 
     override fun onItemClick(position: Int, date: LocalDate?)
@@ -64,52 +68,54 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
         setWeekView()
     }
 
-    /*
-        override fun onResume()
-        {
-            super.onResume()
-            //setEventAdapter()
-        }
-
-
-        private fun setEventAdapter()
-        {
-            val dailyEvents = Event.eventsForDate(CalendarUtils.selectedDate)
-            val eventAdapter = EventAdapter(requireContext(), dailyEvents)
-            eventListView.adapter = eventAdapter
-        }
-
-
-        fun newEventAction(view: View)
-        {
-            //startActivity(Intent(requireContext(), EventEditActivity::class.java))
-        }
-         */
-
-    private fun btPreviousMonthAction(view: View)
+    override fun onResume()
     {
-        val button: Button = view.findViewById(R.id.bt_month_left)
+        super.onResume()
+        setEventAdapter()
+    }
+
+    private fun setEventAdapter()
+    {
+        val eventListView: ListView = requireView().findViewById(R.id.eventListView)
+        val dailyEvents = Event.eventsForDate(selectedDate?: LocalDate.now())
+        val eventAdapter = EventAdapter(requireContext(), dailyEvents)
+        eventListView.adapter = eventAdapter
+    }
+
+    // BOTÃO CALENDARIO VOLTAR SEMANA
+    private fun btPreviousWeek(view: View)
+    {
+        val button: Button = view.findViewById(R.id.bt_week_left)
         button.setOnClickListener {
             selectedDate?.let { nonNullSelectedDate ->
-                val newDate = nonNullSelectedDate.minusMonths(1)
+                val newDate = nonNullSelectedDate.minusWeeks(1)
                 selectedDate = newDate
                 setWeekView()
             }
         }
     }
 
-    private fun btNextMonthAction(view: View)
+    // BOTÃO CALENDARIO PROXIMA SEMANA
+    private fun btNextWeek(view: View)
     {
-        val button: Button = view.findViewById(R.id.bt_month_right)
+        val button: Button = view.findViewById(R.id.bt_week_right)
         button.setOnClickListener {
             selectedDate?.let { nonNullSelectedDate ->
-                val newDate = nonNullSelectedDate.plusMonths(1)
+                val newDate = nonNullSelectedDate.plusWeeks(1)
                 selectedDate = newDate
                 setWeekView()
             }
         }
     }
 
-
+    // BOTÃO NOVO EVENTO
+    private fun btEvent(view: View)
+    {
+        val button: Button = view.findViewById(R.id.bt_new_event)
+        button.setOnClickListener{
+            val action = LessonDirections.actionLessonToEventEdit()
+            findNavController().navigate(action)
+        }
+    }
 
 }

@@ -38,14 +38,20 @@
         android:label="lesson"
         tools:layout="@layout/fragment_lesson" >
         <action
-            android:id="@+id/action_lesson_to_weekViewActivity"
-            app:destination="@id/weekViewActivity"
-            app:popUpTo="@id/weekViewActivity"
+            android:id="@+id/action_lesson_to_eventEdit"
+            app:destination="@id/eventEdit"
+            app:popUpTo="@id/lesson"
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
-        android:id="@+id/weekViewActivity"
-        android:name="com.example.sescgmf.WeekViewActivity"
-        android:label="fragment_week_view_activity"
-        tools:layout="@layout/fragment_week_view_activity" />
+        android:id="@+id/eventEdit"
+        android:name="com.example.sescgmf.EventEdit"
+        android:label="fragment_event_edit"
+        tools:layout="@layout/fragment_event_edit" >
+        <action
+            android:id="@+id/action_eventEdit_to_lesson"
+            app:destination="@id/lesson"
+            app:popUpTo="@id/lesson"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

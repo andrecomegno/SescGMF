@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +16,7 @@
         android:background="@color/Yellow">
 
         <Button
-            android:id="@+id/bt_month_left"
+            android:id="@+id/bt_week_left"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -27,7 +28,7 @@
             tools:ignore="HardcodedText,VisualLintButtonSize" />
 
         <TextView
-            android:id="@+id/tile_month"
+            android:id="@+id/title_month"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="2"
@@ -39,7 +40,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/bt_month_right"
+            android:id="@+id/bt_week_right"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -62,7 +63,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="SUM"
+            android:text="@string/SUNDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -72,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="MON"
+            android:text="@string/MONDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -82,7 +83,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="TUE"
+            android:text="@string/TUESDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -92,7 +93,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="WED"
+            android:text="@string/WEDNESDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -102,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="THUR"
+            android:text="@string/THURSDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -112,7 +113,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="FRI"
+            android:text="@string/FRIDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -122,7 +123,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="SAT"
+            android:text="@string/SATURDAY"
             android:textAlignment="center"
             android:textColor="@color/dark_gray"
             android:textSize="16sp"/>
@@ -132,15 +133,14 @@
         android:id="@+id/calendarRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:orientation="horizontal"/>
+        android:layout_weight="1" />
 
     <Button
-        android:id="@+id/bt_new_training"
+        android:id="@+id/bt_new_event"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/transparent"
-        android:text="New Event"
+        android:text="@string/new_event"
         android:textColor="@color/dark_gray"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -148,8 +148,9 @@
         tools:ignore="HardcodedText,VisualLintButtonSize" />
 
     <ListView
+        android:id="@+id/eventListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"/>
+        android:layout_weight="5" />
 
 </LinearLayout>

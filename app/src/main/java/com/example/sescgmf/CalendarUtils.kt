@@ -10,6 +10,16 @@ object CalendarUtils
 {
     var selectedDate: LocalDate? = null
 
+    fun formattedDate(date: LocalDate): String {
+        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+        return date.format(formatter)
+    }
+
+    fun formattedTime(time: LocalTime): String {
+        val formatter = DateTimeFormatter.ofPattern("hh:mm:ss a")
+        return time.format(formatter)
+    }
+
     fun monthYearFromDate(date: LocalDate): String {
         val formatter = DateTimeFormatter.ofPattern("MMMM yyyy")
         return date.format(formatter)

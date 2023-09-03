@@ -1,4 +1,7 @@
 <resources>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="app_name">SescGMF</string>
     <!-- Welcome -->
     <string name="hi_good_morning">Hi, good morning !</string>
@@ -32,9 +35,22 @@
     <string name="account_profile">Account Profile</string>
     <string name="register_email">andrecomegno@email.com</string>
     <string name="training_weeks">0</string>
+    <!-- Calendar -->
     <string name="arrow_left"><![CDATA[<]]></string>
     <string name="arrow_right"><![CDATA[>]]></string>
     <string name="calendar_month_year">August 2023</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="SUNDAY">SUM</string>
+    <string name="MONDAY">MON</string>
+    <string name="TUESDAY">TUE</string>
+    <string name="WEDNESDAY">WED</string>
+    <string name="THURSDAY">THUR</string>
+    <string name="FRIDAY">FRI</string>
+    <string name="SATURDAY">SAT</string>
+    <!-- Button Lesson -->
+    <string name="new_event">New Event</string>
+    <string name="bt_save">Save</string>
+    <string name="event_name">Event Name</string>
+    <string name="event">Event</string>
+    <string name="enter_name_event">Enter a Name Event !</string>
+
 </resources>

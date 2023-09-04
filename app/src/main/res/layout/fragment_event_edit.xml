@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="70dp"
-        android:background="@color/Yellow">
+        android:background="@color/yellow">
 
         <Button
             android:id="@+id/bt_back_lesson"

@@ -17,7 +17,7 @@ object CalendarUtils
 
     fun formattedTime(time: LocalTime): String
     {
-        val formatter = DateTimeFormatter.ofPattern("hh:mm")
+        val formatter = DateTimeFormatter.ofPattern("HH:mm a")
         return time.format(formatter)
     }
 

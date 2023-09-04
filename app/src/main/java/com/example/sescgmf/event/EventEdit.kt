@@ -55,6 +55,10 @@ class EventEdit : Fragment()
                 findNavController().navigate(action)
                 // CRIA UM NOVO EVENTO NO LESSON
                 Event.eventsList.add(newEvent)
+                // Atualize a CalendarUtils.selectedDate para a data do evento
+                selectedDate = newEvent.date
+
+
             }
             else
             {

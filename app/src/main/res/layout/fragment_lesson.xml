@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="70dp"
-        android:background="@color/Yellow">
+        android:background="@color/yellow">
 
         <Button
             android:id="@+id/bt_week_left"
@@ -25,7 +25,7 @@
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
+            tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
 
         <TextView
             android:id="@+id/title_month"
@@ -37,7 +37,8 @@
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
 
         <Button
             android:id="@+id/bt_week_right"
@@ -49,14 +50,15 @@
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textStyle="bold"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
+            tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/calendar_weeks"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/yellow_lite">
 
         <TextView
             android:id="@+id/week_sum"
@@ -139,18 +141,23 @@
         android:id="@+id/bt_new_event"
         android:layout_width="150dp"
         android:layout_height="48dp"
+        android:layout_gravity="center"
         android:backgroundTint="@color/green"
         android:text="@string/new_event"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_gravity="center"
-        tools:ignore="HardcodedText,VisualLintButtonSize" />
+        tools:ignore="HardcodedText,VisualLintButtonSize,TextSizeCheck,TextContrastCheck" />
 
     <ListView
         android:id="@+id/eventListView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="5" />
+        android:layout_height="50dp"
+        android:layout_weight="5"
+        android:backgroundTint="@color/gray_lite"/>
+
+
+
+
 
 </LinearLayout>

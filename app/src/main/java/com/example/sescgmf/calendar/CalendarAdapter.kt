@@ -31,15 +31,6 @@ RecyclerView.Adapter<CalendarViewHolder>()
         if (date == CalendarUtils.selectedDate) {
             holder.itemView.setBackgroundColor(Color.LTGRAY)
         }
-        else if (datesWithEvents.contains(date))
-        {
-            holder.itemView.setBackgroundColor(Color.YELLOW)
-        }
-        else
-        {
-            holder.itemView.setBackgroundColor(Color.TRANSPARENT)
-        }
-
     }
 
     override fun getItemCount(): Int

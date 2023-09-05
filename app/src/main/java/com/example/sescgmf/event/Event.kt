@@ -15,6 +15,7 @@ class Event(var name: String, var date: LocalDate, var time: LocalTime)
             {
                 if (event.date == date) events.add(event)
             }
+
             return events
         }
     }

@@ -58,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/yellow_lite">
+        android:background="@color/gray_lite">
 
         <TextView
             android:id="@+id/week_sum"

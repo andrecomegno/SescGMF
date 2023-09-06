@@ -55,6 +55,7 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
         setWeekView()
     }
 
+    // CALENDARIO POR SEMANA
     private fun setWeekView()
     {
         // CALENDARIO SEMANAS
@@ -80,6 +81,7 @@ class Lesson : Fragment(), CalendarAdapter.OnItemListener
         setEventAdapter()
     }
 
+    // LISTA DE EVENTOS
     private fun setEventAdapter()
     {
         val eventListView: ListView = requireView().findViewById(R.id.eventListView)

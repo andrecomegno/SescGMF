@@ -1,90 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".home.Home">
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="700dp"
-                tools:ignore="TextSizeCheck">
-
-                <ImageView
-                    android:id="@+id/panel_top"
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="150dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/im_top"
-                    app:layout_constraintDimensionRatio="16:9"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    tools:ignore="ContentDescription" />
+                    android:layout_gravity="top" >
 
-                <TextView
-                    android:id="@+id/txt_hello"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginTop="45dp"
-                    android:text="@string/hi_good_morning"
-                    android:textColor="@color/gray"
-                    android:textSize="20sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    <ImageView
+                        android:id="@+id/panel_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/im_top"
+                        tools:ignore="ContentDescription" />
 
-                <TextView
-                    android:id="@+id/lb_username"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_marginStart="12dp"
-                    android:text="@string/register_username"
-                    android:textColor="@color/yellow"
-                    android:textSize="30sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_hello" />
+                    <TextView
+                        android:id="@+id/txt_hello"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="38dp"
+                        android:text="@string/hi_good_morning"
+                        android:textColor="@color/gray"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/lb_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="65dp"
+                        android:text="@string/register_username"
+                        android:textColor="@color/yellow"
+                        android:textSize="30sp"
+                        android:textStyle="bold" />
+                </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/pl_row_00"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    app:cardBackgroundColor="@color/gray"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/panel_top" />
+                    app:cardBackgroundColor="@color/gray" />
 
                 <TextView
                     android:id="@+id/txt_incentive"
                     android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_margin="12dp"
                     android:text="@string/lets_start_your_day_by_training"
                     android:textColor="@color/dark_gray"
-                    android:textSize="15sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pl_row_00" />
+                    android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:orientation="horizontal" >
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/training_tip_01"
                     android:layout_width="180dp"
                     android:layout_height="100dp"
+                    android:layout_gravity="start"
                     android:layout_marginStart="15dp"
-                    android:layout_marginTop="50dp"
-                    app:cardBackgroundColor="@color/gray"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/pl_row_00" >
+                    android:layout_marginEnd="2dp"
+                    app:cardBackgroundColor="@color/gray">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -100,19 +93,14 @@
                         android:layout_marginTop="75dp"
                         android:layout_marginStart="8dp"
                         android:textColor="@color/white"/>
-
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/training_tip_02"
                     android:layout_width="180dp"
                     android:layout_height="100dp"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginEnd="15dp"
-                    app:cardBackgroundColor="@color/gray"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/training_tip_01"
-                    app:layout_constraintTop_toBottomOf="@+id/pl_row_00" >
+                    android:layout_gravity="right"
+                    app:cardBackgroundColor="@color/gray">
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -128,113 +116,110 @@
                         android:layout_marginTop="75dp"
                         android:layout_marginStart="8dp"
                         android:textColor="@color/white"/>
-
                 </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/bt_training"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="150dp"
+                    android:layout_marginTop="50dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
+                    android:layout_gravity="center_horizontal"
                     android:background="@drawable/bt_training"
                     android:text="@string/access_my_training"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/row2"
-                    app:layout_constraintTop_toBottomOf="@+id/pl_row_00"
                     tools:ignore="VisualLintButtonSize" />
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/row2"
                     android:layout_width="match_parent"
                     android:layout_height="10dp"
-                    android:layout_marginTop="360dp"
-                    app:cardBackgroundColor="@color/gray"
-                    app:layout_constraintTop_toBottomOf="@+id/pl_row_00" />
+                    android:layout_marginTop="50dp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/gray" />
+
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="2dp"
+                app:cardBackgroundColor="@color/gray">
 
                 <TextView
                     android:id="@+id/txt_routine"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/your_routine"
                     android:textColor="@color/dark_gray"
+                    android:textAlignment="center"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/row2" />
-
-                <TextView
-                    android:id="@+id/txt_routine_description"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginStart="28dp"
-                    android:layout_marginTop="56dp"
-                    android:text="@string/consecutive_training_weeks"
-                    android:textColor="@color/dark_gray"
-                    android:textSize="10sp"
-                    app:layout_constraintEnd_toStartOf="@+id/row3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_routine"
-                    tools:ignore="SmallSp" />
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/txt_train_count"
                     android:layout_width="wrap_content"
                     android:layout_height="26dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"
                     android:text="@string/training_weeks"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toStartOf="@+id/row3"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_routine_description"
                     tools:ignore="TextSizeCheck" />
 
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/row3"
-                    android:layout_width="3dp"
-                    android:layout_height="50dp"
-                    app:cardBackgroundColor="@color/gray"
-                    android:layout_marginTop="15dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_routine" />
+
+                <TextView
+                    android:id="@+id/txt_routine_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="8dp"
+                    android:textAlignment="center"
+                    android:text="@string/consecutive_training_weeks"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="10sp"
+                    tools:ignore="RtlCompat,SmallSp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_gravity="start"
+                app:cardBackgroundColor="@color/gray">
 
                 <TextView
                     android:id="@+id/txt_performance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_margin="10dp"
-                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="8dp"
                     android:text="@string/engagement_with_training"
                     android:textColor="@color/dark_gray"
                     android:textSize="10sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.515"
-                    app:layout_constraintStart_toEndOf="@+id/row3"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_routine"
-                    tools:ignore="SmallSp" />
+                    android:textAlignment="center"
+                    tools:ignore="RtlCompat,SmallSp" />
 
                 <TextView
                     android:id="@+id/txt_train_status"
-                    android:layout_width="wrap_content"
-                    android:layout_height="26dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
                     android:text="@string/low"
                     android:textColor="@color/dark_gray"
                     android:textSize="20sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/row3"
-                    app:layout_constraintTop_toBottomOf="@+id/txt_performance"
+                    android:textAlignment="center"
                     tools:ignore="TextSizeCheck" />
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
         </LinearLayout>
-    </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+</ScrollView>

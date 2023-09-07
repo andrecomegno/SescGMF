@@ -54,4 +54,22 @@
             app:popUpTo="@id/lesson"
             app:popUpToInclusive="true" />
     </fragment>
+    <fragment
+        android:id="@+id/login"
+        android:name="com.example.sescgmf.login.Login"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcome"
+        android:name="com.example.sescgmf.welcome.Welcome"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcome_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>

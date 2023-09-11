@@ -53,5 +53,18 @@
     <string name="event">Event</string>
     <string name="enter_name_event">Enter a Name Event !</string>
     <string name="select_date">00/00/0000</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="add_new_event">Add new event</string>
+    <string name="bt_login">Enter</string>
+    <string name="lb_email">E-Mail</string>
+    <string name="hint_email">user@email.com</string>
+    <string name="lb_password">Password</string>
+    <string name="hint_password">******</string>
+
 
 </resources>

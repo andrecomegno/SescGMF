@@ -3,7 +3,9 @@
     <style name="Base.Theme.SescGMF" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="android:statusBarColor">@android:color/transparent</item>>
         <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowBackground">@color/white</item>
     </style>
 
-    <style name="Theme.SescGMF" parent="Base.Theme.SescGMF"/>
+    <style name="Theme.SescGMF" parent="Base.Theme.SescGMF" />
+
 </resources>

@@ -56,7 +56,7 @@ class EventEdit : Fragment()
             else
             {
                 // ERRO ALERTA
-                binding.txtEventName.error = getString(R.string.enter_name_event)
+                binding.txtEventName.error = getString(R.string.lb_enter_name_event)
             }
         }
 

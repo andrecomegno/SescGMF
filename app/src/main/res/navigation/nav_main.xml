@@ -71,5 +71,29 @@
         <action
             android:id="@+id/action_login_to_home"
             app:destination="@id/home" />
+        <action
+            android:id="@+id/action_login_to_recoverPassword"
+            app:destination="@id/recoverPassword" />
+        <action
+            android:id="@+id/action_login_to_newRegister"
+            app:destination="@id/newRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/recoverPassword"
+        android:name="com.example.sescgmf.login.RecoverPassword"
+        android:label="fragment_recover_password"
+        tools:layout="@layout/fragment_recover_password" >
+        <action
+            android:id="@+id/action_recoverPassword_to_home"
+            app:destination="@id/home" />
+    </fragment>
+    <fragment
+        android:id="@+id/newRegister"
+        android:name="com.example.sescgmf.login.NewRegister"
+        android:label="fragment_new_register"
+        tools:layout="@layout/fragment_new_register" >
+        <action
+            android:id="@+id/action_newRegister_to_home"
+            app:destination="@id/home" />
     </fragment>
 </navigation>

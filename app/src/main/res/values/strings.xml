@@ -3,68 +3,65 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="app_name">SescGMF</string>
-    <!-- Welcome -->
-    <string name="hi_good_morning">Hi, good morning !</string>
-    <string name="lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
-    <!-- Button Training -->
-    <string name="access_my_training">Access My Training</string>
-    <!-- Statistic Training -->
-    <string name="your_routine">Your Routine</string>
-    <string name="consecutive_training_weeks">Consecutive training weeks</string>
-    <string name="engagement_with_training">Engagement with training</string>
-    <string name="low">LOW</string>
-    <!-- Menu Button  -->
-    <string name="home">home</string>
-    <string name="training">training</string>
-    <string name="profile">profile</string>
-    <string name="lesson">lesson</string>
-    <!-- TIPS -->
-    <string name="tip_01">Focus on training</string>
-    <string name="tip_02">Quality of life</string>
-    <!-- Setting -->
-    <string name="base_unit">Base unit:</string>
-    <string name="registration">Registration:</string>
-    <string name="account_sesc">Account Sesc</string>
-    <string name="username">Username:</string>
-    <string name="e_mail">E-Mail:</string>
-    <string name="linked_account">Linked Account</string>
-    <string name="delete_account">Delete Account</string>
-    <string name="register_username">André Comegno</string>
-    <string name="base_unit_sesc">SESC - BAURU/SP</string>
-    <string name="register_number_username">0123456789-00</string>
-    <string name="account_profile">Account Profile</string>
-    <string name="register_email">andrecomegno@email.com</string>
-    <string name="training_weeks">0</string>
-    <!-- Calendar -->
-    <string name="arrow_left"><![CDATA[<]]></string>
-    <string name="arrow_right"><![CDATA[>]]></string>
-    <string name="calendar_month_year">August 2023</string>
-    <string name="SUNDAY">SUM</string>
-    <string name="MONDAY">MON</string>
-    <string name="TUESDAY">TUE</string>
-    <string name="WEDNESDAY">WED</string>
-    <string name="THURSDAY">THUR</string>
-    <string name="FRIDAY">FRI</string>
-    <string name="SATURDAY">SAT</string>
-    <!-- Button Lesson -->
-    <string name="new_event">New Event</string>
+    <!-- BUTTON  -->
+    <string name="bt_home">home</string>
+    <string name="bt_training">training</string>
+    <string name="bt_profile">profile</string>
+    <string name="bt_lesson">lesson</string>
+    <string name="bt_arrow_left"><![CDATA[<]]></string>
+    <string name="bt_arrow_right"><![CDATA[>]]></string>
     <string name="bt_save">Save</string>
-    <string name="event_name">Event Name</string>
-    <string name="event">Event</string>
-    <string name="enter_name_event">Enter a Name Event !</string>
-    <string name="select_date">00/00/0000</string>
-    <string name="title_activity_welcome">Welcome</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-    <string name="add_new_event">Add new event</string>
     <string name="bt_login">Enter</string>
+    <string name="bt_new_register">New register</string>
+    <string name="bt_recover_password">Recover password</string>
+    <string name="bt_send_email">Send</string>
+    <string name="bt_access_my_training">Access My Training</string>
+    <string name="bt_delete_account">Delete Account</string>
+    <string name="bt_new_event">New Event</string>
+    <!-- LOGIN - REGISTER - RECOVER-->
+    <string name="lb_title_register">Register</string>
+    <string name="title_recover">Recover</string>
     <string name="lb_email">E-Mail</string>
-    <string name="hint_email">user@email.com</string>
     <string name="lb_password">Password</string>
+    <string name="lb_confirm_password">Confirm Password</string>
     <string name="hint_password">******</string>
-
+    <string name="hint_email">user@email.com</string>
+    <!-- HOME -->
+    <string name="lb_hi_good_morning">Hi, good morning !</string>
+    <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
+    <string name="lb_your_routine">Your Routine</string>
+    <string name="lb_consecutive_training_weeks">Consecutive training weeks</string>
+    <string name="lb_engagement_with_training">Engagement with training</string>
+    <string name="lb_low">LOW</string>
+    <string name="lb_tip_01">Focus on training</string>
+    <string name="lb_tip_02">Quality of life</string>
+    <!-- PROFILE -->
+    <string name="lb_base_unit">Base unit:</string>
+    <string name="lb_registration">Registration:</string>
+    <string name="lb_account_sesc">Account Sesc</string>
+    <string name="lb_username">Username:</string>
+    <string name="lb_e_mail">E-Mail:</string>
+    <string name="lb_linked_account">Linked Account</string>
+    <string name="lb_register_username">André Comegno</string>
+    <string name="lb_base_unit_sesc">SESC - BAURU/SP</string>
+    <string name="lb_register_number_username">0123456789-00</string>
+    <string name="lb_account_profile">Account Profile</string>
+    <string name="lb_register_email">andrecomegno@email.com</string>
+    <string name="lb_training_weeks">0</string>
+    <!-- LESSON -->
+    <string name="lb_event_name">Event Name</string>
+    <string name="lb_title_event">New Event</string>
+    <string name="lb_enter_name_event">Enter a Name Event !</string>
+    <string name="lb_select_date">00/00/0000</string>
+    <string name="lb_add_new_event">Add new event</string>
+    <!-- CALENDAR -->
+    <string name="lb_calendar_month_year">August 2023</string>
+    <string name="lb_SUNDAY">SUM</string>
+    <string name="lb_MONDAY">MON</string>
+    <string name="lb_TUESDAY">TUE</string>
+    <string name="lb_WEDNESDAY">WED</string>
+    <string name="lb_THURSDAY">THUR</string>
+    <string name="lb_FRIDAY">FRI</string>
+    <string name="lb_SATURDAY">SAT</string>
 
 </resources>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".event.EventEdit">
+    tools:context=".login.NewRegister">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -24,7 +24,7 @@
                 android:orientation="horizontal">
 
             <Button
-                android:id="@+id/bt_back_lesson"
+                android:id="@+id/bt_back_login"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@android:color/transparent"
@@ -35,11 +35,11 @@
                 tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
 
             <TextView
-                android:id="@+id/title_event"
+                android:id="@+id/title_register"
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:paddingTop="15dp"
-                android:text="@string/lb_title_event"
+                android:text="@string/lb_title_register"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -49,63 +49,82 @@
             </LinearLayout>
         </com.google.android.material.appbar.AppBarLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginHorizontal="30dp"
-            android:text="@string/lb_event_name"
-            android:textStyle="bold"
-            android:textColor="@color/dark_gray"
-            android:textSize="18sp" />
+            android:text="@string/lb_email"
+            android:textColor="@color/dark_gray"/>
 
         <EditText
-            android:id="@+id/txt_event_name"
+            android:id="@+id/txt_creator_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:hint="@string/lb_add_new_event"
-            android:inputType="text"
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
             android:padding="14dp"
-            android:textSize="20sp"
+            android:textSize="16sp"
             tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
             android:importantForAutofill="no" />
 
-        <LinearLayout
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:text="@string/lb_password"
+            android:textColor="@color/dark_gray"/>
 
-            <TextView
-                android:id="@+id/event_date"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/lb_select_date"
-                android:layout_marginHorizontal="30dp"
-                android:textStyle="bold"
-                android:textColor="@color/dark_gray"
-                android:textSize="15sp" />
-        </LinearLayout>
+        <EditText
+            android:id="@+id/txt_creator_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+            android:importantForAutofill="no" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/lb_confirm_password"
+            android:textColor="@color/dark_gray"/>
+
+        <EditText
+            android:id="@+id/txt_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_edit"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+            android:importantForAutofill="no" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bt_save_event"
-            android:layout_width="150dp"
-            android:layout_height="48dp"
+            android:id="@+id/bt_new_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:background="@drawable/bt_default"
+            android:textAllCaps="false"
             android:text="@string/bt_save"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     </LinearLayout>
+</LinearLayout>
 </ScrollView>
-
-
-
-
-

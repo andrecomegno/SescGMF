@@ -1,24 +1,25 @@
 package com.example.sescgmf.login
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentLoginBinding
+import com.example.sescgmf.databinding.FragmentNewRegisterBinding
 
-class Login : Fragment()
+class NewRegister : Fragment()
 {
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentNewRegisterBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentLoginBinding.inflate(inflater,container, false)
+        _binding = FragmentNewRegisterBinding.inflate(inflater,container, false)
         return binding.root
     }
 
@@ -30,20 +31,15 @@ class Login : Fragment()
 
     private fun initClicks()
     {
-        // BOTÃO LOGIN
-        binding.btEnterLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_login_to_home)
-        }
-
         // BOTÃO CADASTRO
-        binding.btRegister.setOnClickListener{
-            findNavController().navigate(R.id.action_login_to_newRegister)
+        binding.btNewRegister.setOnClickListener{
+            findNavController().navigate(R.id.action_newRegister_to_home)
         }
 
-        // BOTÃO ESQUECI SENHA
-        binding.btRecoverPassword.setOnClickListener{
-            findNavController().navigate(R.id.action_login_to_recoverPassword)
+        // BOTÃO VOLTAR
+        binding.btBackLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_newRegister_to_home)
         }
     }
-}
 
+}

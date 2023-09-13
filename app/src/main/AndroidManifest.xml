@@ -13,14 +13,6 @@
         android:theme="@style/Theme.SescGMF"
         tools:targetApi="31" >
         <activity
-            android:name=".login.Login"
-            android:exported="false" />
-        <activity
-            android:name=".welcome.Welcome"
-            android:exported="false"
-            android:label="@string/title_activity_welcome"
-            android:theme="@style/Theme.SescGMF" />
-        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:screenOrientation="portrait"

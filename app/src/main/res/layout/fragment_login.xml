@@ -2,11 +2,11 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    tools:context=".login.Login"
-    android:id="@+id/loginFragment">
+    tools:context=".login.Login" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,8 +18,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:src="@drawable/im_logo"
-            android:layout_gravity="center"/>
+            tools:ignore="ImageContrastCheck"
+            android:importantForAccessibility="no" />
 
         <TextView
             android:layout_width="match_parent"
@@ -31,11 +33,14 @@
             android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:hint="@string/hint_email"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:padding="14dp"/>
+            android:hint="@string/hint_email"
+            android:inputType="textEmailAddress"
+            android:padding="14dp"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+            android:importantForAutofill="no" />
 
         <TextView
             android:layout_width="match_parent"
@@ -47,24 +52,50 @@
             android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="16sp"
-            android:hint="@string/hint_password"
             android:layout_marginTop="8dp"
             android:background="@drawable/bg_edit"
-            android:padding="14dp"/>
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="16sp"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
+            android:importantForAutofill="no" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bt_login"
+            android:id="@+id/bt_enterLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:backgroundTint="@color/green"
+            android:background="@drawable/bt_default"
             android:textAllCaps="false"
             android:text="@string/bt_login"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bt_register"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bt_new_register"
+                android:gravity="start"
+                android:textColor="@color/dark_gray"/>
+
+            <TextView
+                android:id="@+id/bt_recover_password"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="@string/bt_recover_password"
+                android:textColor="@color/dark_gray"/>
+
+        </LinearLayout>
     </LinearLayout>
+
 </ScrollView>

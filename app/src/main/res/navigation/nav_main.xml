@@ -95,5 +95,8 @@
         <action
             android:id="@+id/action_newRegister_to_home"
             app:destination="@id/home" />
+        <action
+            android:id="@+id/action_newRegister_to_login"
+            app:destination="@id/login" />
     </fragment>
 </navigation>

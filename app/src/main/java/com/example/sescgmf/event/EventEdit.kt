@@ -48,8 +48,8 @@ class EventEdit : Fragment()
             {
                 // ATRIBUIU AO NOVO EVENTO NOME, DATA E HORA
                 val newEvent = Event( eventName, selectedDate?: LocalDate.now(), time )
-                // FRAGMENT LESSON
-                findNavController().navigate(R.id.action_eventEdit_to_lesson)
+                // VOLTAR PARA O FRAGMENT ANTERIOR
+                findNavController().popBackStack()
                 // CRIA UM NOVO EVENTO NO LESSON
                 Event.eventsList.add(newEvent)
             }

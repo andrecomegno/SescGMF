@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.sescgmf.MainActivity
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentWelcomeBinding
 
@@ -33,6 +34,13 @@ class Welcome : Fragment()
     private fun checkAuth()
     {
         findNavController().navigate(R.id.action_welcome_to_login)
+    }
+
+    override fun onResume()
+    {
+        super.onResume()
+        // OCULTA O BottomNavigationView
+        (activity as MainActivity).hideBottomNavigationView()
     }
 
     override fun onDestroyView()

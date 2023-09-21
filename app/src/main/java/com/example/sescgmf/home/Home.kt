@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.sescgmf.MainActivity
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentHomeBinding
 
@@ -34,6 +35,13 @@ class Home : Fragment()
         binding.btTraining.setOnClickListener{
             findNavController().navigate(R.id.action_home_to_training)
         }
+    }
+
+    override fun onResume()
+    {
+        super.onResume()
+        // HABILITA O BottomNavigationView
+        (activity as MainActivity).showBottomNavigationView()
     }
 
     override fun onDestroyView()

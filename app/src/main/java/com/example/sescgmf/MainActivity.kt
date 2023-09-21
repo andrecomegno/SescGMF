@@ -1,6 +1,7 @@
 package com.example.sescgmf
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -35,18 +36,16 @@ class MainActivity : AppCompatActivity()
         // MENU BOTAO
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.setupWithNavController(navController)
+    }
 
-        // CONTROLA A VISIBILIDADE DO BottomNavigationView
-        navController.addOnDestinationChangedListener { _, destination, _ ->
-            when (destination.id) {
-                R.id.welcomeFragment, R.id.loginFragment -> {
-                    binding.bottomNavigationView.visibility = View.GONE
-                }
-                else -> {
-                    binding.bottomNavigationView.visibility = View.VISIBLE
-                }
-            }
-        }
+    fun hideBottomNavigationView() {
+        // DESATIVA O bottomNavigationView
+        binding.bottomNavigationView.visibility = View.GONE
+    }
+
+    fun showBottomNavigationView() {
+        // HABILITA O bottomNavigationView
+        binding.bottomNavigationView.visibility = View.VISIBLE
     }
     
 }

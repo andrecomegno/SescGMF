@@ -26,14 +26,8 @@ class EventEdit : Fragment()
     ): View?
     {
         _binding = FragmentEventEditBinding.inflate(inflater,container, false)
-        eventViewDate()
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?)
-    {
-        super.onViewCreated(view, savedInstanceState)
         initClicks()
+        return binding.root
     }
 
     private fun initClicks()
@@ -64,6 +58,8 @@ class EventEdit : Fragment()
         binding.btBackLesson.setOnClickListener{
             findNavController().navigate(R.id.action_eventEdit_to_lesson)
         }
+
+        eventViewDate()
     }
 
     // MOSTRA A DATA SELECIONADA NA TELA

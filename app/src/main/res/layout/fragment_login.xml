@@ -61,7 +61,7 @@
             tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
             android:importantForAutofill="no" />
 
-        <androidx.appcompat.widget.AppCompatButton
+         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_enterLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

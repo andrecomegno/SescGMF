@@ -33,8 +33,9 @@
     <string name="lb_consecutive_training_weeks">Consecutive training weeks</string>
     <string name="lb_engagement_with_training">Engagement with training</string>
     <string name="lb_low">LOW</string>
-    <string name="lb_tip_01">Focus on training</string>
-    <string name="lb_tip_02">Quality of life</string>
+    <string name="lb_tip_01"> Training focused on your goals</string>
+    <string name="lb_tip_02">Most current equipment</string>
+    <string name="lb_tip_03">A qualified team to serve you</string>
     <!-- PROFILE -->
     <string name="lb_base_unit">Base unit:</string>
     <string name="lb_registration">Registration:</string>
@@ -63,5 +64,8 @@
     <string name="lb_THURSDAY">THUR</string>
     <string name="lb_FRIDAY">FRI</string>
     <string name="lb_SATURDAY">SAT</string>
+    <string name="emoji_smile_sunglasses">😎</string>
+    <string name="emoji_trophy">🏆</string>
+    <string name="emoji_hug">🤗</string>
 
 </resources>

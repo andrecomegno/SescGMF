@@ -32,6 +32,7 @@
     <string name="lb_your_routine">Your Routine</string>
     <string name="lb_consecutive_training_weeks">Consecutive training weeks</string>
     <string name="lb_engagement_with_training">Engagement with training</string>
+    <string name="lb_next_training">NEXT TRAINING</string>
     <string name="lb_low">LOW</string>
     <string name="lb_tip_01"> Training focused on your goals</string>
     <string name="lb_tip_02">Most current equipment</string>
@@ -67,5 +68,6 @@
     <string name="emoji_smile_sunglasses">😎</string>
     <string name="emoji_trophy">🏆</string>
     <string name="emoji_hug">🤗</string>
+    <string name="lb_workouts_to_do_at_home">WORKOUTS TO DO AT HOME</string>
 
 </resources>

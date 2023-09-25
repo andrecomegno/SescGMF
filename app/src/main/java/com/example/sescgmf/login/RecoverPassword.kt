@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
-import com.example.sescgmf.databinding.FragmentLoginBinding
 import com.example.sescgmf.databinding.FragmentRecoverPasswordBinding
 
 class RecoverPassword : Fragment()
@@ -31,7 +30,15 @@ class RecoverPassword : Fragment()
 
     private fun initClicks()
     {
+        // BOTÃO ESQUECI SENHA
+        binding.btSendRecover.setOnClickListener{
+            findNavController().navigate(R.id.action_recoverPassword_to_login)
+        }
 
+        // BOTÃO VOLTAR
+        binding.btBackLogin.setOnClickListener{
+            findNavController().navigate(R.id.action_recoverPassword_to_login)
+        }
     }
 
     override fun onDestroyView()

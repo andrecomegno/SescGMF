@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
-import com.example.sescgmf.databinding.FragmentLoginBinding
 import com.example.sescgmf.databinding.FragmentNewRegisterBinding
 
 class NewRegister : Fragment()
@@ -38,7 +37,7 @@ class NewRegister : Fragment()
 
         // BOTÃO VOLTAR
         binding.btBackLogin.setOnClickListener{
-            findNavController().navigate(R.id.action_newRegister_to_home)
+            findNavController().navigate(R.id.action_newRegister_to_login)
         }
     }
 

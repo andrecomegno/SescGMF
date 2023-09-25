@@ -65,7 +65,8 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:scrollbars="none" >
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -177,12 +178,16 @@
             </LinearLayout>
         </HorizontalScrollView>
 
-        <androidx.cardview.widget.CardView
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_gravity="center"
-            app:cardBackgroundColor="@color/gray" />
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:text="@string/lb_next_training"
+            android:textColor="@color/dark_gray"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_training"
@@ -190,7 +195,7 @@
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="15dp"
             android:background="@drawable/bt_training"
             android:text="@string/bt_access_my_training"
@@ -204,6 +209,17 @@
             android:layout_marginTop="100dp"
             android:layout_gravity="center"
             app:cardBackgroundColor="@color/gray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/lb_workouts_to_do_at_home"
+            android:textColor="@color/dark_gray"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            tools:ignore="SmallSp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -261,6 +277,13 @@
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="75dp"
+            android:layout_gravity="bottom"
+            app:cardBackgroundColor="@color/gray" />
 
         </LinearLayout>
 </ScrollView>

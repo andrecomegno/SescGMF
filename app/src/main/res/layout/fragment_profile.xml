@@ -60,7 +60,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_account_sesc"
+            android:text="@string/lb_title_account_sesc"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_base_unit"
+            android:text="@string/lb_title_base_unit"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_registration"
+            android:text="@string/lb_title_registration"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -133,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_account_profile"
+            android:text="@string/lb_title_account_profile"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -207,7 +207,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_linked_account"
+            android:text="@string/lb_title_linked_account"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -215,8 +215,9 @@
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_marginHorizontal="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginHorizontal="15dp" />
+            tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"

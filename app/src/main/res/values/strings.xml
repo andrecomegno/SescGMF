@@ -29,25 +29,22 @@
     <!-- HOME -->
     <string name="lb_hi_good_morning">Hi, good morning !</string>
     <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
-    <string name="lb_your_routine">Your Routine</string>
-    <string name="lb_consecutive_training_weeks">Consecutive training weeks</string>
-    <string name="lb_engagement_with_training">Engagement with training</string>
-    <string name="lb_next_training">NEXT TRAINING</string>
-    <string name="lb_low">LOW</string>
-    <string name="lb_tip_01"> Training focused on your goals</string>
-    <string name="lb_tip_02">Most current equipment</string>
-    <string name="lb_tip_03">A qualified team to serve you</string>
+    <string name="lb_title_next_training">NEXT TRAINING</string>
+    <string name="lb_title_workouts_to_do_at_home">WORKOUTS TO DO AT HOME</string>
+    <string name="lb_home_tip_01"> Training focused on your goals</string>
+    <string name="lb_home_tip_02">Most current equipment</string>
+    <string name="lb_home_tip_03">A qualified team to serve you</string>
     <!-- PROFILE -->
-    <string name="lb_base_unit">Base unit:</string>
-    <string name="lb_registration">Registration:</string>
-    <string name="lb_account_sesc">Account Sesc</string>
+    <string name="lb_title_base_unit">Base unit:</string>
+    <string name="lb_title_registration">Registration:</string>
+    <string name="lb_title_account_sesc">Account Sesc</string>
+    <string name="lb_title_account_profile">Account Profile</string>
     <string name="lb_username">Username:</string>
     <string name="lb_e_mail">E-Mail:</string>
-    <string name="lb_linked_account">Linked Account</string>
+    <string name="lb_title_linked_account">Linked Account</string>
     <string name="lb_register_username">André Comegno</string>
     <string name="lb_base_unit_sesc">SESC - BAURU/SP</string>
     <string name="lb_register_number_username">0123456789-00</string>
-    <string name="lb_account_profile">Account Profile</string>
     <string name="lb_register_email">andrecomegno@email.com</string>
     <string name="lb_training_weeks">0</string>
     <!-- LESSON -->
@@ -68,6 +65,15 @@
     <string name="emoji_smile_sunglasses">😎</string>
     <string name="emoji_trophy">🏆</string>
     <string name="emoji_hug">🤗</string>
-    <string name="lb_workouts_to_do_at_home">WORKOUTS TO DO AT HOME</string>
+    <!-- TRAINING -->
+    <string name="lb_title_training">Training</string>
+    <string name="lb_title_your_routine">Your Routine</string>
+    <string name="lb_training_tip_01">💡 - You can request a new workout or increase the duration of the current one</string>
+    <string name="lb_see_other_training_options">SEE OTHER TRAINING OPTIONS</string>
+    <string name="lb_title_in_the_last_month">in the last month</string>
+    <string name="lb_done_workouts">Done\nWorkouts</string>
+    <string name="lb_hits_made">Hits\nMade</string>
+    <string name="lb_description_done_workouts">50</string>
+    <string name="lb_description_hits_made">20</string>
 
 </resources>

@@ -8,10 +8,11 @@
     <item android:title="@string/bt_training"
         android:id="@+id/training"
         android:icon="@drawable/ic_training"/>
-
+    <!--
     <item android:title="@string/bt_lesson"
         android:id="@+id/lesson"
         android:icon="@drawable/ic_date"/>
+        -->
     <item
         android:title="@string/bt_profile"
         android:id="@+id/profile"

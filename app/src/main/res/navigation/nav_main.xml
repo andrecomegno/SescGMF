@@ -33,28 +33,6 @@
             app:popUpToInclusive="false" />
     </fragment>
     <fragment
-        android:id="@+id/lesson"
-        android:name="com.example.sescgmf.lesson.Lesson"
-        android:label="lesson"
-        tools:layout="@layout/fragment_lesson" >
-        <action
-            android:id="@+id/action_lesson_to_eventEdit"
-            app:destination="@id/eventEdit"
-            app:popUpTo="@id/lesson"
-            app:popUpToInclusive="false" />
-    </fragment>
-    <fragment
-        android:id="@+id/eventEdit"
-        android:name="com.example.sescgmf.event.EventEdit"
-        android:label="fragment_event_edit"
-        tools:layout="@layout/fragment_event_edit" >
-        <action
-            android:id="@+id/action_eventEdit_to_lesson"
-            app:destination="@id/lesson"
-            app:popUpTo="@id/lesson"
-            app:popUpToInclusive="true" />
-    </fragment>
-    <fragment
         android:id="@+id/welcome"
         android:name="com.example.sescgmf.welcome.Welcome"
         android:label="fragment_welcome"

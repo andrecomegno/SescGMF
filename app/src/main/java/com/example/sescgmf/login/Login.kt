@@ -9,6 +9,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.MainActivity
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentLoginBinding
+import com.google.firebase.auth.ktx.auth
 
 class Login : Fragment()
 {

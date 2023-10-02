@@ -129,6 +129,15 @@
             android:textStyle="bold"
             tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:indeterminateTint="@color/yellow"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
+
     </LinearLayout>
 </LinearLayout>
 </ScrollView>

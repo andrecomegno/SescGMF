@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentNewRegisterBinding
@@ -54,7 +55,7 @@ class NewRegister : Fragment()
         {
             if(password.isNotEmpty())
             {
-                binding.progressBar.isActivated = true
+                binding.progressBar.isVisible = true
                 registerUser(email,password)
             }
             else
@@ -78,7 +79,7 @@ class NewRegister : Fragment()
                 }
                 else
                 {
-                    binding.progressBar.isActivated = false
+                    binding.progressBar.isVisible = false
                 }
             }
     }

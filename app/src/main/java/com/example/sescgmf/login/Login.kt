@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.MainActivity
@@ -60,7 +61,7 @@ class Login : Fragment()
         {
             if(password.isNotEmpty())
             {
-                binding.progressBar.isActivated = true
+                binding.progressBar.isVisible = true
                 loginEnter(email,password)
             }
             else
@@ -84,7 +85,7 @@ class Login : Fragment()
                 }
                 else
                 {
-                    binding.progressBar.isActivated = false
+                    binding.progressBar.isVisible = false
                 }
             }
     }

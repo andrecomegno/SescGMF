@@ -28,6 +28,7 @@
     <string name="hint_email">user@email.com</string>
     <string name="lb_enter_your_password">Enter your password</string>
     <string name="lb_enter_your_email">Enter your email</string>
+    <string name="lb_send_email">Sent, check your email box</string>
     <!-- HOME -->
     <string name="lb_hi_good_morning">Hi, good morning !</string>
     <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>

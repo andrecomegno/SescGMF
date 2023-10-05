@@ -59,12 +59,12 @@ class NewRegister : Fragment()
             }
             else
             {
-                Toast.makeText(requireContext(), "Informe sua senha", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), getString(R.string.lb_enter_your_password), Toast.LENGTH_SHORT).show()
             }
         }
         else
         {
-            Toast.makeText(requireContext(), "Informe sua email", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.lb_enter_your_email), Toast.LENGTH_SHORT).show()
         }
     }
 

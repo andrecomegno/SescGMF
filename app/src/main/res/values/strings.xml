@@ -26,6 +26,8 @@
     <string name="lb_confirm_password">Confirm Password</string>
     <string name="hint_password">******</string>
     <string name="hint_email">user@email.com</string>
+    <string name="lb_enter_your_password">Enter your password</string>
+    <string name="lb_enter_your_email">Enter your email</string>
     <!-- HOME -->
     <string name="lb_hi_good_morning">Hi, good morning !</string>
     <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
@@ -75,5 +77,6 @@
     <string name="lb_hits_made">Hits\nMade</string>
     <string name="lb_description_done_workouts">50</string>
     <string name="lb_description_hits_made">20</string>
+
 
 </resources>

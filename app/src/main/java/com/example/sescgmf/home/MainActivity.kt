@@ -1,7 +1,6 @@
-package com.example.sescgmf
+package com.example.sescgmf.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
@@ -9,6 +8,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.sescgmf.R
 import com.example.sescgmf.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 

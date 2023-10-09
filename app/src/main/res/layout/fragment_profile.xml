@@ -25,6 +25,25 @@
                 android:src="@drawable/im_top"
                 tools:ignore="ContentDescription,ImageContrastCheck" />
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/black"
+            android:layout_gravity="bottom|right"
+            app:cardCornerRadius="50dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/bt_logout"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/ic_logout"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        </androidx.cardview.widget.CardView>
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/im_profile"
                 android:layout_width="90dp"

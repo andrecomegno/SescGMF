@@ -69,10 +69,8 @@ class RecoverPassword : Fragment()
                 {
                     Toast.makeText(requireContext(), getString(R.string.lb_send_email), Toast.LENGTH_SHORT).show()
                 }
-                else
-                {
-                    binding.progressBar.isVisible = false
-                }
+
+                binding.progressBar.isVisible = false
             }
     }
 

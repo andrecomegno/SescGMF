@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.sescgmf.MainActivity
+import com.example.sescgmf.home.MainActivity
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth

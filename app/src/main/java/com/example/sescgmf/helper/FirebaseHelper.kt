@@ -16,16 +16,28 @@ class FirebaseHelper {
         {
             return when{
                 error.contains("An internal error has occurred") -> {
-                    R.string.account_not_registered_register_fragment
+                    R.string.Invalid_email_password
                 }
 
                 error.contains( "The email address is badly formatted") -> {
                     R.string.invalid_email_register_fragment
                 }
-                else -> {
-                    0
+
+                error.contains("We have blocked all requests from this device due to unusual activity") -> {
+                    R.string.We_have_blocked_account
                 }
 
+                error.contains("The email address is already in use by another account") -> {
+                    R.string.email_in_use_register_fragment
+                }
+
+                error.contains("Password should be at least 6 characters") -> {
+                    R.string.strong_password_register_fragment
+                }
+
+                else -> {
+                    R.string.error_generic
+                }
             }
         }
     }

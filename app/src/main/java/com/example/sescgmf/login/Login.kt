@@ -12,6 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.home.MainActivity
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentLoginBinding
+import com.example.sescgmf.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -86,7 +87,12 @@ class Login : Fragment()
                 }
                 else
                 {
-                    Log.i("INFOTESTE", "loginUser: ${task.exception?.message}" )
+                    // AVISOS DE ERROS
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                     binding.progressBar.isVisible = false
                 }
             }

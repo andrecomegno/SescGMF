@@ -1,6 +1,7 @@
 package com.example.sescgmf.login
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentNewRegisterBinding
+import com.example.sescgmf.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -79,6 +81,12 @@ class NewRegister : Fragment()
                 }
                 else
                 {
+                    // AVISOS DE ERROS
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                     binding.progressBar.isVisible = false
                 }
             }

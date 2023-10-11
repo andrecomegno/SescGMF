@@ -10,6 +10,7 @@ import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentRecoverPasswordBinding
+import com.example.sescgmf.helper.FirebaseHelper
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -68,6 +69,15 @@ class RecoverPassword : Fragment()
                 if (task.isSuccessful)
                 {
                     Toast.makeText(requireContext(), getString(R.string.lb_send_email), Toast.LENGTH_SHORT).show()
+                }
+                else
+                {
+                    // AVISOS DE ERROS
+                    Toast.makeText(
+                        requireContext(),
+                        FirebaseHelper.validError(task.exception?.message ?: ""),
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
 
                 binding.progressBar.isVisible = false

@@ -81,6 +81,12 @@
     <string name="lb_select_training_a">A</string>
     <string name="lb_select_training_b">B</string>
     <string name="lb_select_training_c">C</string>
+    <!--    Error Firebase Authentication-->
+    <string name="account_not_registered_register_fragment">No accounts found</string>
+    <string name="invalid_email_register_fragment">Enter a valid email.</string>
+    <string name="invalid_password_register_fragment">Invalid password, try again.</string>
+    <string name="email_in_use_register_fragment">This email is already in use.</string>
+    <string name="strong_password_register_fragment">Enter a stronger password.</string>
 
 
 </resources>

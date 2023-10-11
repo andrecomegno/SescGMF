@@ -1,6 +1,7 @@
 package com.example.sescgmf.login
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -85,6 +86,7 @@ class Login : Fragment()
                 }
                 else
                 {
+                    Log.i("INFOTESTE", "loginUser: ${task.exception?.message}" )
                     binding.progressBar.isVisible = false
                 }
             }

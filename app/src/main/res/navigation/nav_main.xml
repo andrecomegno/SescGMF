@@ -22,9 +22,9 @@
         android:label="profile"
         tools:layout="@layout/fragment_profile" >
         <action
-            android:id="@+id/action_profile_to_autentication"
+            android:id="@+id/action_profile_to_authentication"
             app:destination="@id/authentication"
-            app:popUpTo="@id/home"
+            app:popUpTo="@id/profile"
             app:popUpToInclusive="true" />
     </fragment>
     <fragment

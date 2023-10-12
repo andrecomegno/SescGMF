@@ -47,7 +47,7 @@ class Profile : Fragment()
     private fun logoutUser()
     {
         auth.signOut()
-        findNavController().navigate(R.id.action_profile_to_autentication)
+        findNavController().navigate(R.id.action_profile_to_authentication)
     }
 
     override fun onDestroyView()

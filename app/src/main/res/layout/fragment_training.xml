@@ -30,7 +30,6 @@
                 android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/title_month"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="15dp"
@@ -44,7 +43,6 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <TextView
-            android:id="@+id/txt_incentive"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="12dp"
@@ -53,12 +51,12 @@
             android:textSize="15sp" />
 
     <LinearLayout
-        android:id="@+id/bt_training_a"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_training_a"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"

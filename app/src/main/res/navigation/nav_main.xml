@@ -37,6 +37,9 @@
             app:destination="@id/home"
             app:popUpTo="@id/home"
             app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_training_to_myTraining"
+            app:destination="@id/myTraining" />
     </fragment>
     <fragment
         android:id="@+id/welcome"
@@ -101,4 +104,13 @@
                 app:popUpToInclusive="true" />
         </fragment>
     </navigation>
+    <fragment
+        android:id="@+id/myTraining"
+        android:name="com.example.sescgmf.training.MyTraining"
+        android:label="fragment_my_training"
+        tools:layout="@layout/fragment_my_training" >
+        <action
+            android:id="@+id/action_myTraining_to_training"
+            app:destination="@id/training" />
+    </fragment>
 </navigation>

@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
+import com.example.sescgmf.R
 import com.example.sescgmf.databinding.FragmentMyTrainingBinding
+import com.example.sescgmf.home.MainActivity
 
 class MyTraining : Fragment()
 {
@@ -18,6 +21,27 @@ class MyTraining : Fragment()
     ): View? {
         _binding = FragmentMyTrainingBinding.inflate(inflater,container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?)
+    {
+        super.onViewCreated(view, savedInstanceState)
+        initClicks()
+    }
+
+    private fun initClicks()
+    {
+        // BOTÃO VOLTAR
+        binding.btBackTraining.setOnClickListener{
+            findNavController().navigate(R.id.action_myTraining_to_training)
+        }
+    }
+
+    override fun onResume()
+    {
+        super.onResume()
+        // OCULTA O BottomNavigationView
+        (activity as MainActivity).hideBottomNavigationView()
     }
 
     override fun onDestroyView()

@@ -18,7 +18,6 @@
             android:layout_height="200dp">
 
             <ImageView
-                android:id="@+id/panel_top"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:scaleType="centerCrop"
@@ -74,7 +73,6 @@
             app:cardBackgroundColor="@color/gray" />
 
         <TextView
-            android:id="@+id/lb_account_sesc_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -90,7 +88,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/lb_base_unit"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -117,7 +114,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/lb_registration"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -147,7 +143,6 @@
             app:cardBackgroundColor="@color/gray" />
 
         <TextView
-            android:id="@+id/lb_account_profile_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -163,7 +158,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/lb_username"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -192,7 +186,6 @@
         android:orientation="horizontal" >
 
         <TextView
-            android:id="@+id/lb_email"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
@@ -221,7 +214,6 @@
             app:cardBackgroundColor="@color/gray" />
 
         <TextView
-            android:id="@+id/lb_title_linked_account"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"

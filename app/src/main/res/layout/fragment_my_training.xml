@@ -2,6 +2,7 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
@@ -23,17 +24,26 @@
             android:background="@color/yellow">
 
             <LinearLayout
-                android:id="@+id/calendar_lesson"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
+                <Button
+                    android:id="@+id/bt_back_training"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/transparent"
+                    android:text="@string/bt_arrow_left"
+                    android:textColor="@color/white"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
+
                 <TextView
-                    android:id="@+id/title_month"
-                    android:layout_width="match_parent"
+                    android:layout_width="240dp"
                     android:layout_height="match_parent"
                     android:padding="15dp"
-                    android:text="TREINING A"
+                    android:text="Treining A"
                     android:textAlignment="center"
                     android:textColor="@color/white"
                     android:textSize="20sp"
@@ -42,5 +52,206 @@
 
             </LinearLayout>
         </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="Training description"
+            android:textColor="@color/dark_gray"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/training_01"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/gray_lite">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="133dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:src="@drawable/im_training_01"
+                android:background="@color/yellow"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Generic description, fitness training and sport exercise."
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="10dp"
+                android:text="3x 15a20"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/training_02"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/gray_lite">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="133dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:src="@drawable/im_training_02"
+                android:background="@color/yellow"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Generic description, fitness training and sport exercise."
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="10dp"
+                android:text="3x 15a20"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/training_03"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/gray_lite">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="133dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:src="@drawable/im_training_03"
+                android:background="@color/yellow"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Generic description, fitness training and sport exercise."
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="10dp"
+                android:text="3x 15a20"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/training_04"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/gray_lite">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="133dp"
+                android:padding="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="start"
+                android:src="@drawable/im_training_04"
+                android:background="@color/yellow"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp"
+                android:text="Generic description, fitness training and sport exercise."
+                android:textColor="@color/dark_gray"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:layout_width="230dp"
+                android:layout_height="70dp"
+                android:layout_gravity="bottom|end"
+                android:layout_marginTop="10dp"
+                android:text="3x 15a20"
+                android:textColor="@color/yellow"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_start_training"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="start training"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/bt_default_square"
+            tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
+
     </LinearLayout>
 </ScrollView>

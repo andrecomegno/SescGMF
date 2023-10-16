@@ -88,6 +88,8 @@
     <string name="email_in_use_register_fragment">This email is already in use.</string>
     <string name="strong_password_register_fragment">Enter a stronger password.</string>
     <string name="error_generic">Error unknown, try later.</string>
+    <string name="lb_let_s_start_training">Let\'s start training?</string>
+    <string name="lb_title_training_abc">Training A</string>
 
 
 </resources>

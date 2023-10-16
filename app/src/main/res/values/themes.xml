@@ -8,12 +8,23 @@
 
     <style name="Theme.SescGMF" parent="Base.Theme.SescGMF" />
 
+    <!-- Main Menu. -->
     <style name="Widget.App.BottomNavigationView" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView</item>
     </style>
 
     <style name="ThemeOverlay.App.BottomNavigationView" parent="">
         <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <!-- Menu Start Training -->
+    <style name="Widget.App.BottomNavigationView_2" parent="Widget.MaterialComponents.BottomNavigationView.Colored">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.BottomNavigationView_2</item>
+    </style>
+
+    <style name="ThemeOverlay.App.BottomNavigationView_2" parent="">
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textSize">28sp</item>
     </style>
 
 </resources>

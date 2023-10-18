@@ -42,6 +42,13 @@ class MyTraining : Fragment()
         super.onResume()
         // OCULTA O BottomNavigationView
         (activity as MainActivity).hideBottomNavigationView()
+        // HABILITA O BottomNavigationView_2
+        (activity as MainActivity).showBottomNavigationViewTraining()
+    }
+
+    private fun initRecyclerView()
+    {
+
     }
 
     override fun onDestroyView()

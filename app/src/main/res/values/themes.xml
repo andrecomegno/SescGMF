@@ -24,7 +24,12 @@
 
     <style name="ThemeOverlay.App.BottomNavigationView_2" parent="">
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
     </style>
+
+    <style name="TextAppearance.MaterialComponents.Caption" parent="">
+        <item name="android:textSize">18sp</item>
+    </style>
+
 
 </resources>

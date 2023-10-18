@@ -74,6 +74,7 @@
     <string name="lb_training_tip_01">💡 - You can request a new workout or increase the duration of the current one</string>
     <string name="lb_see_other_training_options">SEE OTHER TRAINING OPTIONS</string>
     <string name="lb_title_in_the_last_month">in the last month</string>
+    <string name="lb_let_s_start_training">Let\'s start training?</string>
     <string name="lb_done_workouts">Done\nWorkouts</string>
     <string name="lb_hits_made">Hits\nMade</string>
     <string name="lb_description_done_workouts">50</string>
@@ -81,6 +82,9 @@
     <string name="lb_select_training_a">A</string>
     <string name="lb_select_training_b">B</string>
     <string name="lb_select_training_c">C</string>
+    <!-- TRAINING CLASS -->
+    <string name="lb_title_training_abc">Training A</string>
+    <string name="lb_generic_description_fitness">Generic description, fitness training and sport exercise.</string>
     <!--    Error Firebase Authentication-->
     <string name="Invalid_email_password">Invalid email or password</string>
     <string name="invalid_email_register_fragment">Enter a valid email.</string>
@@ -88,8 +92,6 @@
     <string name="email_in_use_register_fragment">This email is already in use.</string>
     <string name="strong_password_register_fragment">Enter a stronger password.</string>
     <string name="error_generic">Error unknown, try later.</string>
-    <string name="lb_let_s_start_training">Let\'s start training?</string>
-    <string name="lb_title_training_abc">Training A</string>
-
+    <string name="lb_repetitions_training">3x 15a20</string>
 
 </resources>

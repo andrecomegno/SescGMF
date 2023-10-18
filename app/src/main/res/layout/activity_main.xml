@@ -21,19 +21,6 @@
         app:navGraph="@navigation/nav_main" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationView"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@color/blue"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bt_nav"
-        app:labelVisibilityMode="labeled"
-        tools:ignore="VisualLintBottomNav"
-        style="@style/Widget.App.BottomNavigationView"/>
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView_2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -45,5 +32,18 @@
         app:labelVisibilityMode="labeled"
         tools:ignore="VisualLintBottomNav"
         style="@style/Widget.App.BottomNavigationView_2"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/blue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bt_nav"
+        app:labelVisibilityMode="labeled"
+        tools:ignore="VisualLintBottomNav"
+        style="@style/Widget.App.BottomNavigationView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -38,14 +38,26 @@ class MainActivity : AppCompatActivity()
         bottomNavigationView.setupWithNavController(navController)
     }
 
+    // Main bottomNavigationView
     fun hideBottomNavigationView() {
-        // DESATIVA O bottomNavigationView
+        // DESATIVA
         binding.bottomNavigationView.visibility = View.GONE
     }
 
     fun showBottomNavigationView() {
-        // HABILITA O bottomNavigationView
+        // HABILITA
         binding.bottomNavigationView.visibility = View.VISIBLE
+    }
+
+    // Start Training bottomNavigationView
+    fun hideBottomNavigationViewTraining() {
+        // HABILITA
+        binding.bottomNavigationView2.visibility = View.GONE
+    }
+
+    fun showBottomNavigationViewTraining() {
+        // DESATIVA
+        binding.bottomNavigationView2.visibility = View.VISIBLE
     }
     
 }

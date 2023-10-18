@@ -52,6 +52,8 @@ class Welcome : Fragment()
         super.onResume()
         // OCULTA O BottomNavigationView
         (activity as MainActivity).hideBottomNavigationView()
+        // OCULTA O BottomNavigationView_2
+        (activity as MainActivity).hideBottomNavigationViewTraining()
     }
 
     override fun onDestroyView()

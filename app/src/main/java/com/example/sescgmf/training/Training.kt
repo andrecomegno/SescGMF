@@ -42,6 +42,8 @@ class Training : Fragment(R.layout.fragment_training)
         super.onResume()
         // HABILITA O BottomNavigationView
         (activity as MainActivity).showBottomNavigationView()
+        // OCULTA O BottomNavigationView_2
+        (activity as MainActivity).hideBottomNavigationViewTraining()
     }
 
     override fun onDestroyView()

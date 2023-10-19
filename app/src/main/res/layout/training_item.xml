@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -23,7 +23,6 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="8dp"
             android:layout_gravity="start"
-            android:src="@drawable/im_training_01"
             android:background="@color/yellow"
             tools:ignore="ContentDescription,ImageContrastCheck" />
 
@@ -40,6 +39,7 @@
             tools:ignore="TextContrastCheck" />
 
         <TextView
+            android:id="@+id/lb_repetitions"
             android:layout_width="230dp"
             android:layout_height="70dp"
             android:layout_gravity="bottom|end"

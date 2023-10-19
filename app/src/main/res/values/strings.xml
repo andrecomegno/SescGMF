@@ -85,6 +85,7 @@
     <!-- TRAINING CLASS -->
     <string name="lb_title_training_abc">Training A</string>
     <string name="lb_generic_description_fitness">Generic description, fitness training and sport exercise.</string>
+    <string name="lb_repetitions_training">3x 15a20</string>
     <!--    Error Firebase Authentication-->
     <string name="Invalid_email_password">Invalid email or password</string>
     <string name="invalid_email_register_fragment">Enter a valid email.</string>
@@ -92,6 +93,5 @@
     <string name="email_in_use_register_fragment">This email is already in use.</string>
     <string name="strong_password_register_fragment">Enter a stronger password.</string>
     <string name="error_generic">Error unknown, try later.</string>
-    <string name="lb_repetitions_training">3x 15a20</string>
 
 </resources>

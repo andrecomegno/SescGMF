@@ -112,5 +112,13 @@
         <action
             android:id="@+id/action_myTraining_to_training"
             app:destination="@id/training" />
+        <action
+            android:id="@+id/action_myTraining_to_trainingGo"
+            app:destination="@id/trainingGo" />
     </fragment>
+    <fragment
+        android:id="@+id/trainingGo"
+        android:name="com.example.sescgmf.training.TrainingGo"
+        android:label="fragment_training_go"
+        tools:layout="@layout/fragment_training_go" />
 </navigation>

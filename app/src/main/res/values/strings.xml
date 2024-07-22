@@ -1,34 +1,24 @@
 <resources>
+    <string name="app_name">SescGMF</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="app_name">SescGMF</string>
-    <!-- BUTTON  -->
-    <string name="bt_home">home</string>
-    <string name="bt_training">training</string>
-    <string name="bt_profile">profile</string>
-    <string name="bt_lesson">lesson</string>
-    <string name="bt_arrow_left"><![CDATA[<]]></string>
-    <string name="bt_arrow_right"><![CDATA[>]]></string>
-    <string name="bt_save">Save</string>
-    <string name="bt_login">Enter</string>
-    <string name="bt_new_register">New register</string>
-    <string name="bt_recover_password">Recover password</string>
-    <string name="bt_send_email">Send</string>
-    <string name="bt_access_my_training">Access My Training</string>
-    <string name="bt_delete_account">Delete Account</string>
-    <string name="bt_new_event">New Event</string>
-    <!-- LOGIN - REGISTER - RECOVER-->
-    <string name="lb_title_register">Register</string>
-    <string name="title_recover">Recover</string>
-    <string name="lb_email">E-Mail</string>
-    <string name="lb_password">Password</string>
-    <string name="lb_confirm_password">Confirm Password</string>
-    <string name="hint_password">******</string>
-    <string name="hint_email">user@email.com</string>
+    <!-- GENERIC  -->
+    <string name="lb_unknown" translatable="false">Unknown</string>
+    <!-- AUTHENTICATION -->
+    <string name="title_recover_password">Recover Password</string>
+    <string name="title_new_register">New Register</string>
+    <string name="title_account">Account</string>
+    <string name="title_create_password">Create Password</string>
+    <string name="lb_name_user">Name</string>
+    <string name="lb_email_user">E-Mail</string>
+    <string name="lb_password_user">Password</string>
+    <string name="lb_confirm_password_user">Confirm Password</string>
     <string name="lb_enter_your_password">Enter your password</string>
-    <string name="lb_enter_your_email">Enter your email</string>
-    <string name="lb_send_email">Sent, check your email box</string>
+    <string name="placeholder_username">My Name</string>
+    <string name="placeholder_password">******</string>
+    <string name="placeholder_email">user@email.com</string>
+    <string name="placeholder_create_password">Create Password</string>
+    <string name="placeholder_repeat_password">Repeat Password</string>
     <!-- HOME -->
     <string name="lb_hi_good_morning">Hi, good morning !</string>
     <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
@@ -45,11 +35,6 @@
     <string name="lb_username">Username:</string>
     <string name="lb_e_mail">E-Mail:</string>
     <string name="lb_title_linked_account">Linked Account</string>
-    <string name="lb_register_username">André Comegno</string>
-    <string name="lb_base_unit_sesc">SESC - BAURU/SP</string>
-    <string name="lb_register_number_username">0123456789-00</string>
-    <string name="lb_register_email">andrecomegno@email.com</string>
-    <string name="lb_training_weeks">0</string>
     <!-- LESSON -->
     <string name="lb_event_name">Event Name</string>
     <string name="lb_title_event">New Event</string>
@@ -73,7 +58,7 @@
     <string name="lb_title_your_routine">Your Routine</string>
     <string name="lb_training_tip_01">💡 - You can request a new workout or increase the duration of the current one</string>
     <string name="lb_see_other_training_options">SEE OTHER TRAINING OPTIONS</string>
-    <string name="lb_title_in_the_last_month">in the last month</string>
+    <string name="title_in_the_last_month">in the last month</string>
     <string name="lb_let_s_start_training">Let\'s start training?</string>
     <string name="lb_done_workouts">Done\nWorkouts</string>
     <string name="lb_hits_made">Hits\nMade</string>
@@ -83,15 +68,53 @@
     <string name="lb_select_training_b">B</string>
     <string name="lb_select_training_c">C</string>
     <!-- TRAINING CLASS -->
-    <string name="lb_title_training_abc">Training A</string>
+    <string name="title_training_abc">Training A</string>
     <string name="lb_generic_description_fitness">Generic description, fitness training and sport exercise.</string>
     <string name="lb_repetitions_training">3x 15a20</string>
-    <!--    Error Firebase Authentication-->
-    <string name="Invalid_email_password">Invalid email or password</string>
-    <string name="invalid_email_register_fragment">Enter a valid email.</string>
-    <string name="We_have_blocked_account">Invalid password, try again.</string>
-    <string name="email_in_use_register_fragment">This email is already in use.</string>
-    <string name="strong_password_register_fragment">Enter a stronger password.</string>
-    <string name="error_generic">Error unknown, try later.</string>
-
+    <!-- BUTTON  -->
+    <string name="bt_home">home</string>
+    <string name="bt_training">training</string>
+    <string name="bt_profile">profile</string>
+    <string name="bt_lesson">lesson</string>
+    <string name="bt_arrow_left"><![CDATA[<]]></string>
+    <string name="bt_arrow_right"><![CDATA[>]]></string>
+    <string name="bt_save">Save</string>
+    <string name="bt_login">Enter</string>
+    <string name="bt_register">register</string>
+    <string name="bt_recover_password">recover password ?</string>
+    <string name="bt_send">SEND</string>
+    <string name="bt_access_my_training">Access My Training</string>
+    <string name="bt_delete_account">Delete Account</string>
+    <string name="bt_new_event">New Event</string>
+    <!-- Error Firebase Authentication-->
+    <string name="alert_invalid_email_password">Invalid email or password</string>
+    <string name="alert_invalid_email_register_fragment">Enter a valid email.</string>
+    <string name="alert_we_have_blocked_account">Invalid password, try again.</string>
+    <string name="alert_email_in_use_register_fragment">This email is already in use.</string>
+    <string name="alert_strong_password_register_fragment">Enter a stronger password.</string>
+    <string name="alert_error_unknown">Error unknown, try later.</string>
+    <!-- ALERT  -->
+    <string name="alert_enter_your_password">Enter your password</string>
+    <string name="alert_password_required_to_change_your_registration">Password required to change your registration</string>
+    <string name="alert_different_password">Different password</string>
+    <string name="alert_enter_your_email">Enter your email</string>
+    <string name="alert_enter_your_name">Enter You Name</string>
+    <string name="alert_error_save_register">Oops!, An error occurred while saving</string>
+    <string name="alert_error_unexpected">Oops!, there was an unexpected error.</string>
+    <string name="alert_error_permission_access">You do not have permission to access this application.</string>
+    <string name="alert_save_success">Save Success !</string>
+    <string name="alert_edit_success">Edit Success !</string>
+    <string name="alert_delete_success">Delete Success !</string>
+    <string name="alert_confirm">Confirm</string>
+    <string name="alert_delete">Do you really want to delete a video classes?</string>
+    <string name="alert_logout">Are you sure you want to log out of your account?</string>
+    <string name="alert_error_save_edit">Error Save Edit !</string>
+    <string name="alert_please_complete_all_fields_correctly">Please complete all fields correctly</string>
+    <string name="alert_unknown">Unknown</string>
+    <string name="alert_loading"> Loading…</string>
+    <string name="alert_failed_to_obtain_access_token">Failed to obtain access token.</string>
+    <string name="alert_notification_sent_successfully">Notification sent successfully!</string>
+    <string name="alert_failed_to_send_notifications">Failed to send notifications. Check your internet connection.</string>
+    <string name="alert_no_tokens_found">No tokens found !</string>
+    <string name="alert_error_device_conflict">Login not permitted: The user is already logged in on another device.</string>
 </resources>

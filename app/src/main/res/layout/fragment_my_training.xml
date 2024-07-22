@@ -45,7 +45,7 @@
                 android:layout_width="240dp"
                 android:layout_height="match_parent"
                 android:padding="15dp"
-                android:text="@string/lb_title_training_abc"
+                android:text="@string/title_training_abc"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="20sp"

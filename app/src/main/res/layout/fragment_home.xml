@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
+
+
     tools:context=".home.Home">
 
     <LinearLayout
@@ -43,7 +44,7 @@
                 android:layout_gravity="start"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="65dp"
-                android:text="@string/lb_register_username"
+                android:text="@string/alert_loading"
                 android:textColor="@color/yellow"
                 android:textSize="30sp"
                 android:textStyle="bold" />

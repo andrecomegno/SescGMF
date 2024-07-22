@@ -2,31 +2,32 @@
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/loginFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     android:fillViewport="true"
-    tools:context=".login.Login" >
+    tools:context=".authentication.Login" >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:padding="16dp">
 
         <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
             android:layout_gravity="center"
             android:src="@drawable/im_logo"
-            tools:ignore="ImageContrastCheck"
-            android:importantForAccessibility="no" />
+            android:importantForAccessibility="no"
+            tools:ignore="ImageContrastCheck"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lb_email"
+            android:text="@string/lb_email_user"
+            android:textStyle="bold"
             android:textColor="@color/dark_gray"/>
 
         <EditText
@@ -34,18 +35,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/bg_edit"
-            android:hint="@string/hint_email"
+            android:background="@drawable/txt_edit_auth"
+            android:hint="@string/placeholder_email"
             android:inputType="textEmailAddress"
             android:padding="14dp"
             android:textSize="16sp"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/lb_password"
+            android:text="@string/lb_password_user"
+            android:textStyle="bold"
             android:textColor="@color/dark_gray"/>
 
         <EditText
@@ -53,49 +55,51 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="@drawable/bg_edit"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
+            android:background="@drawable/txt_edit_auth"
+            android:hint="@string/placeholder_password"
+            android:inputType="numberPassword"
             android:padding="14dp"
             android:textSize="16sp"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"
-            android:importantForAutofill="no" />
+            android:importantForAutofill="no"
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize"/>
 
-         <androidx.appcompat.widget.AppCompatButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_enterLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:background="@drawable/bt_default"
-            android:textAllCaps="false"
+            android:background="@drawable/bt_action_in"
             android:text="@string/bt_login"
+            android:textSize="25sp"
             android:textColor="@color/white"
             android:textStyle="bold"
             tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
 
             <TextView
                 android:id="@+id/bt_register"
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/bt_new_register"
-                android:gravity="start"
-                android:textColor="@color/dark_gray"/>
+                android:layout_alignParentStart="true"
+                android:text="@string/bt_register"
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray" />
 
             <TextView
                 android:id="@+id/bt_recover_password"
-                android:layout_width="180dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="end"
+                android:layout_alignParentEnd="true"
                 android:text="@string/bt_recover_password"
-                android:textColor="@color/dark_gray"/>
+                android:textStyle="bold"
+                android:textColor="@color/dark_gray" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
         <ProgressBar
             android:id="@+id/progress_bar"
@@ -104,7 +108,5 @@
             android:indeterminateTint="@color/yellow"
             android:visibility="invisible"
             tools:visibility="visible"/>
-
     </LinearLayout>
-
 </ScrollView>

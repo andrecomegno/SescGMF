@@ -29,17 +29,6 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/bt_back_myTraining"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@android:color/transparent"
-                android:text="@string/bt_arrow_left"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                tools:ignore="HardcodedText,VisualLintButtonSize,TextContrastCheck" />
-
             <TextView
                 android:layout_width="240dp"
                 android:layout_height="match_parent"

@@ -6,10 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
-import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.databinding.FragmentLoginBinding
+import com.andrecomegno.sescgmf.helper.BaseFragment
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
 import com.andrecomegno.sescgmf.home.MainActivity
 import com.andrecomegno.sescgmf.message.NotificationSender.sendLogoutNotification
@@ -24,7 +24,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class Login : Fragment() {
+class Login : BaseFragment() {
     private var _binding: FragmentLoginBinding? = null
     private val binding get() = _binding!!
 
@@ -72,10 +72,12 @@ class Login : Fragment() {
         FirebaseHelper.getAuth().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(requireActivity()) { task ->
                 if (task.isSuccessful) {
+
+                    hideKeyboard()
                     val userId = FirebaseHelper.getIdUser()
 
                     if (userId != null) {
-                        val studentRef = FirebaseHelper.getDatabase().child("classes").child("students").child("student_data").child(userId)
+                        val studentRef = FirebaseHelper.getDatabase().child("academy").child("gym_user").child("user_data").child(userId)
                         studentRef.addListenerForSingleValueEvent(object : ValueEventListener {
                             override fun onDataChange(snapshot: DataSnapshot) {
                                 if (snapshot.exists()) {

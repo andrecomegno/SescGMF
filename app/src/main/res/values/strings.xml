@@ -56,7 +56,7 @@
     <!-- TRAINING -->
     <string name="lb_title_training">Training</string>
     <string name="lb_title_your_routine">Your Routine</string>
-    <string name="lb_training_tip_01">💡 - You can request a new workout or increase the duration of the current one</string>
+    <string name="tips_training">💡 - You can request a new workout or increase the duration of the current one</string>
     <string name="lb_see_other_training_options">SEE OTHER TRAINING OPTIONS</string>
     <string name="title_in_the_last_month">in the last month</string>
     <string name="lb_let_s_start_training">Let\'s start training?</string>
@@ -67,23 +67,18 @@
     <string name="lb_select_training_a">A</string>
     <string name="lb_select_training_b">B</string>
     <string name="lb_select_training_c">C</string>
-    <!-- TRAINING CLASS -->
-    <string name="title_training_abc">Training A</string>
-    <string name="lb_generic_description_fitness">Generic description, fitness training and sport exercise.</string>
-    <string name="lb_repetitions_training">3x 15a20</string>
     <!-- BUTTON  -->
     <string name="bt_home">home</string>
     <string name="bt_training">training</string>
     <string name="bt_profile">profile</string>
     <string name="bt_lesson">lesson</string>
-    <string name="bt_arrow_left"><![CDATA[<]]></string>
-    <string name="bt_arrow_right"><![CDATA[>]]></string>
     <string name="bt_save">Save</string>
     <string name="bt_login">Enter</string>
     <string name="bt_register">register</string>
     <string name="bt_recover_password">recover password ?</string>
     <string name="bt_send">SEND</string>
     <string name="bt_access_my_training">Access My Training</string>
+    <string name="bt_start_training">Start Training</string>
     <string name="bt_delete_account">Delete Account</string>
     <string name="bt_new_event">New Event</string>
     <!-- Error Firebase Authentication-->
@@ -117,4 +112,5 @@
     <string name="alert_failed_to_send_notifications">Failed to send notifications. Check your internet connection.</string>
     <string name="alert_no_tokens_found">No tokens found !</string>
     <string name="alert_error_device_conflict">Login not permitted: The user is already logged in on another device.</string>
+    <string name="alert_training_not_found">training not found</string>
 </resources>

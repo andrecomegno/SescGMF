@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
-                android:text="@string/lb_register_username"
+                android:text="@string/alert_loading"
                 android:textColor="@color/yellow"
                 android:textSize="25sp"
                 android:textStyle="bold"
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_base_unit_sesc"
+            android:text="@string/lb_unknown"
             android:textColor="@color/dark_gray"
             android:textSize="15sp" />
     </LinearLayout>
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_register_number_username"
+            android:text="@string/lb_unknown"
             android:textColor="@color/dark_gray"
             android:textSize="15sp" />
 
@@ -174,7 +174,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_register_username"
+            android:text="@string/lb_unknown"
             android:textColor="@color/dark_gray"
             android:textSize="15sp" />
 
@@ -201,7 +201,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_register_email"
+            android:text="@string/lb_unknown"
             android:textColor="@color/dark_gray"
             android:textSize="15sp" />
 
@@ -242,7 +242,7 @@
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:layout_marginHorizontal="15dp"
-            android:background="@drawable/bt_delete_account"
+            android:background="@drawable/bt_action_out"
             android:text="@string/bt_delete_account"
             android:textColor="@color/white"
             android:textStyle="bold"

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/home"
-        android:name="com.example.sescgmf.home.Home"
+        android:name="com.andrecomegno.sescgmf.home.Home"
         android:label="home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -15,10 +15,15 @@
             app:destination="@id/training"
             app:popUpTo="@id/home"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_home_to_authentication"
+            app:destination="@id/authentication"
+            app:popUpTo="@id/home"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/profile"
-        android:name="com.example.sescgmf.profile.Profile"
+        android:name="com.andrecomegno.sescgmf.profile.Profile"
         android:label="profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -29,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/training"
-        android:name="com.example.sescgmf.training.Training"
+        android:name="com.andrecomegno.sescgmf.training.Training"
         android:label="training"
         tools:layout="@layout/fragment_training" >
         <action
@@ -43,7 +48,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcome"
-        android:name="com.example.sescgmf.home.Welcome"
+        android:name="com.andrecomegno.sescgmf.home.Welcome"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -61,7 +66,7 @@
         app:startDestination="@id/login">
         <fragment
             android:id="@+id/newRegister"
-            android:name="com.example.sescgmf.login.NewRegister"
+            android:name="com.andrecomegno.sescgmf.authentication.NewRegister"
             android:label="fragment_new_register"
             tools:layout="@layout/fragment_new_register">
             <action
@@ -77,7 +82,7 @@
         </fragment>
         <fragment
             android:id="@+id/login"
-            android:name="com.example.sescgmf.login.Login"
+            android:name="com.andrecomegno.sescgmf.authentication.Login"
             android:label="fragment_login"
             tools:layout="@layout/fragment_login">
             <action
@@ -94,7 +99,7 @@
         </fragment>
         <fragment
             android:id="@+id/recoverPassword"
-            android:name="com.example.sescgmf.login.RecoverPassword"
+            android:name="com.andrecomegno.sescgmf.authentication.RecoverPassword"
             android:label="fragment_recover_password"
             tools:layout="@layout/fragment_recover_password">
             <action
@@ -106,7 +111,7 @@
     </navigation>
     <fragment
         android:id="@+id/myTraining"
-        android:name="com.example.sescgmf.training.MyTraining"
+        android:name="com.andrecomegno.sescgmf.training.MyTraining"
         android:label="fragment_my_training"
         tools:layout="@layout/fragment_my_training" >
         <action
@@ -118,7 +123,7 @@
     </fragment>
     <fragment
         android:id="@+id/trainingGo"
-        android:name="com.example.sescgmf.training.TrainingGo"
+        android:name="com.andrecomegno.sescgmf.training.TrainingGo"
         android:label="fragment_training_go"
         tools:layout="@layout/fragment_training_go" />
 </navigation>

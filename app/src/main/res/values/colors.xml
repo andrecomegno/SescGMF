@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="white_snow">#FBFBFB</color>
-    <color name="gray_lite">#F5F5F5</color>
-    <color name="gray">#F2F2F2</color>
+    <color name="black_nav">#1A1A1A</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="gray_text">#4B4B4B</color>
     <color name="dark_gray">#686868</color>
-    <color name="blue">#5DA3FF</color>
-    <color name="blue_bb">#F2FAFA</color>
-    <color name="yellow">#FFB612</color>
-    <color name="yellow_lite">#FBF4E4</color>
-    <color name="green_brazilian">#0B9210</color>
-    <color name="green_water">#00B08C</color>
-    <color name="green">#4CAF50</color>
+    <color name="gray_background">#EAEAEA</color>
+    <color name="gray_lite">#D9D9D9</color>
+    <color name="gray">#F2F2F2</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_snow">#F4F4F4</color>
     <color name="red">#DC143C</color>
-    <color name="royal_blue">#4169E1</color>
+    <color name="red_null">#8D0D0D</color>
+    <color name="red_wine">#993B3B</color>
+    <color name="red_dark">#572424</color>
+    <color name="yellow">#FFB612</color>
+    <color name="orange">#ffa500</color>
+    <color name="green">#4CAF50</color>
+    <color name="green_brazilian">#399601</color>
+    <color name="green_water">#00B08C</color>
+    <color name="purple">#800080</color>
     <color name="hot_pink">#FF69B4</color>
+    <color name="brown">#A52A2A</color>
+    <color name="blue_lite">#D3E6FF</color>
+    <color name="blue">#5DA3FF</color>
+    <color name="royal_blue">#4169E1</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
 </resources>

@@ -76,7 +76,7 @@
     <string name="bt_login">Enter</string>
     <string name="bt_register">register</string>
     <string name="bt_recover_password">recover password ?</string>
-    <string name="bt_send">SEND</string>
+    <string name="bt_send">Send</string>
     <string name="bt_access_my_training">Access My Training</string>
     <string name="bt_start_training">Start Training</string>
     <string name="bt_delete_account">Delete Account</string>

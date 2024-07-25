@@ -18,7 +18,7 @@
             android:layout_height="37dp"
             android:background="@color/black"/>
 
-        <com.google.android.material.appbar.AppBarLayout
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/yellow">
@@ -26,13 +26,13 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/lb_title_training"
+                android:text="@string/title_training"
                 android:textAlignment="center"
                 android:textColor="@color/white"
                 android:textSize="35sp"
                 android:textStyle="bold"
                 tools:ignore="TextContrastCheck" />
-        </com.google.android.material.appbar.AppBarLayout>
+        </androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:layout_width="wrap_content"
@@ -45,14 +45,13 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal" >
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/bt_option_a"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="80dp"
             android:background="@drawable/bt_action_in"
             android:text="@string/bt_training"
             android:textColor="@color/white"
@@ -82,6 +81,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
@@ -89,8 +89,6 @@
             android:id="@+id/bt_option_b"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="80dp"
             android:background="@drawable/bt_action_in"
             android:text="@string/bt_training"
             android:textColor="@color/white"
@@ -120,6 +118,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
@@ -127,8 +126,6 @@
             android:id="@+id/bt_option_c"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginStart="80dp"
             android:background="@drawable/bt_action_in"
             android:text="@string/bt_training"
             android:textColor="@color/white"
@@ -156,10 +153,11 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/training_options"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="80dp"
         tools:ignore="UseCompoundDrawables">
 
         <ImageView
@@ -195,7 +193,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_title_your_routine"
+            android:text="@string/title_your_routine"
             android:textColor="@color/dark_gray"
             android:textSize="20sp"
             android:textStyle="bold" />
@@ -211,14 +209,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:paddingVertical="8dp"
+            android:gravity="center_horizontal|top"
             android:orientation="horizontal" >
 
             <androidx.cardview.widget.CardView
                 android:layout_width="80dp"
                 android:layout_height="80dp"
+                android:layout_marginEnd="50dp"
                 app:cardBackgroundColor="@color/yellow"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="90dp"
                 app:cardCornerRadius="100dp">
 
                 <TextView
@@ -236,8 +236,6 @@
                 android:layout_width="80dp"
                 android:layout_height="80dp"
                 app:cardBackgroundColor="@color/yellow"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="50dp"
                 app:cardCornerRadius="100dp">
 
                 <TextView
@@ -279,6 +277,5 @@
                 android:textSize="15sp"
                 android:textStyle="bold"/>
         </LinearLayout>
-
     </LinearLayout>
 </ScrollView>

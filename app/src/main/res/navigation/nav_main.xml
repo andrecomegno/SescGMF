@@ -27,6 +27,9 @@
         android:label="profile"
         tools:layout="@layout/fragment_profile" >
         <action
+            android:id="@+id/action_profile_to_setting"
+            app:destination="@id/setting" />
+        <action
             android:id="@+id/action_profile_to_authentication"
             app:destination="@id/authentication"
             app:popUpTo="@id/profile"
@@ -120,10 +123,33 @@
         <action
             android:id="@+id/action_myTraining_to_trainingGo"
             app:destination="@id/trainingGo" />
+        <argument
+            android:name="training"
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/trainingGo"
         android:name="com.andrecomegno.sescgmf.training.TrainingGo"
         android:label="fragment_training_go"
         tools:layout="@layout/fragment_training_go" />
+    <fragment
+        android:id="@+id/setting"
+        android:name="com.andrecomegno.sescgmf.profile.Setting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" >
+        <action
+            android:id="@+id/action_setting_to_profile"
+            app:destination="@id/profile"
+            app:popUpTo="@id/setting"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="user"
+            app:argType="com.andrecomegno.sescgmf.model.DataUser"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_setting_to_authentication"
+            app:destination="@id/authentication"
+            app:popUpTo="@id/setting"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>

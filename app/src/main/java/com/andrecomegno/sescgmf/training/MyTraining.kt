@@ -7,12 +7,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
-import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.adapter.VideoAdapter
 import com.andrecomegno.sescgmf.databinding.FragmentMyTrainingBinding
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
+import com.andrecomegno.sescgmf.helper.initToolbar
 import com.andrecomegno.sescgmf.home.MainActivity
 import com.andrecomegno.sescgmf.model.DataVideo
 import com.google.firebase.database.DataSnapshot
@@ -20,6 +20,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 
 class MyTraining : Fragment() {
+    private val args: MyTrainingArgs by navArgs()
     private var _binding: FragmentMyTrainingBinding? = null
     private val binding get() = _binding!!
     private val videoList = mutableListOf<DataVideo>()
@@ -35,15 +36,15 @@ class MyTraining : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initClicks()
+        initToolbar(binding.toolbar)
+        getArgs()
         initRecyclerView()
         getVideo()
     }
 
-    private fun initClicks() {
-        // BOTÃO VOLTAR
-        binding.btBack.setOnClickListener{
-            findNavController().navigate(R.id.action_myTraining_to_training)
+    private fun getArgs(){
+        args.training.let {
+            binding.trainingSelect.text = it
         }
     }
 

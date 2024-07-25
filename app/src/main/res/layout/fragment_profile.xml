@@ -13,71 +13,125 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="200dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="220dp">
 
-            <ImageView
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scaleType="centerCrop"
-                android:src="@drawable/im_top"
-                tools:ignore="ContentDescription,ImageContrastCheck" />
+                android:layout_height="150dp"
+                android:layout_gravity="top"
+                app:cardElevation="1dp"
+                app:cardCornerRadius="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:backgroundTint="@color/black"
-            android:layout_gravity="bottom|right"
-            app:cardCornerRadius="50dp"
-            tools:ignore="RtlHardcoded">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/im_top"
+                    tools:ignore="ContentDescription" />
+
+                <ImageView
+                    android:id="@+id/bt_logout"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_gravity="end"
+                    android:src="@drawable/ic_logout"
+                    tools:ignore="ContentDescription" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                app:cardBackgroundColor="@color/gray"
+                app:cardCornerRadius="0dp"
+                app:cardElevation="1dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <ImageView
-                android:id="@+id/bt_logout"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_margin="10dp"
-                android:src="@drawable/ic_logout"
-                tools:ignore="ContentDescription,ImageContrastCheck" />
+                android:id="@+id/bt_avatar_delete"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="top|end"
+                android:elevation="12dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintStart_toStartOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="@+id/materialCardView" />
 
-        </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/bt_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="15dp"
+                android:layout_gravity="bottom|end"
+                android:elevation="12dp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@+id/materialCardView"
+                app:layout_constraintEnd_toEndOf="@+id/materialCardView" />
 
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/im_profile"
-                android:layout_width="90dp"
-                android:layout_height="90dp"
-                android:layout_marginBottom="30dp"
-                android:layout_gravity="center"
-                android:src="@drawable/im_profile"
-                app:shapeAppearanceOverlay="@style/Circular" />
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintBottom_toTopOf="@+id/txt_user"
+                app:layout_constraintEnd_toEndOf="@+id/cardView"
+                app:layout_constraintStart_toStartOf="@+id/cardView"
+                app:strokeColor="@color/blue"
+                app:strokeWidth="2dp">
+
+                <ImageView
+                    android:id="@+id/image_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/im_profile" />
+
+            </com.google.android.material.card.MaterialCardView>
 
             <TextView
-                android:id="@+id/lb_user"
-                android:layout_width="wrap_content"
+                android:id="@+id/txt_user"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:text="@string/alert_loading"
-                android:textColor="@color/yellow"
-                android:textSize="25sp"
+                android:layout_marginHorizontal="65dp"
+                android:layout_alignBottom="@+id/materialCardView"
+                android:layout_alignParentBottom="true"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/lb_unknown"
+                android:textAlignment="center"
+                android:textColor="@color/gray_text"
+                android:textSize="18sp"
                 android:textStyle="bold"
-                tools:ignore="TextContrastCheck" />
+                app:layout_constraintBottom_toBottomOf="parent" />
 
-        </androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/pl_row_00"
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="10dp"
-            app:cardBackgroundColor="@color/gray" />
+            android:layout_height="3dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginHorizontal="15dp"
+            android:background="?actionBarDivider"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_title_account_sesc"
+            android:text="@string/title_account_sesc"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -92,7 +146,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_title_base_unit"
+            android:text="@string/title_base_unit"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -118,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="15dp"
-            android:text="@string/lb_title_registration"
+            android:text="@string/title_registration"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold"
@@ -147,7 +201,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:layout_gravity="center"
-            android:text="@string/lb_title_account_profile"
+            android:text="@string/title_account_profile"
             android:textColor="@color/dark_gray"
             android:textSize="15sp"
             android:textStyle="bold" />
@@ -206,54 +260,36 @@
             android:textSize="15sp" />
 
     </LinearLayout>
-
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             app:cardBackgroundColor="@color/gray" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:layout_gravity="center"
-            android:text="@string/lb_title_linked_account"
-            android:textColor="@color/dark_gray"
-            android:textSize="15sp"
+            android:text="@string/title_edit_account"
+            android:textColor="@color/gray_text"
+            android:textAlignment="center"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_edit"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="15dp"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            tools:ignore="SpeakableTextPresentCheck,VisualLintButtonSize" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:layout_marginTop="30dp"
-            app:cardBackgroundColor="@color/gray" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/bt_delete_account"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginHorizontal="15dp"
-            android:background="@drawable/bt_action_out"
-            android:text="@string/bt_delete_account"
+            android:background="@drawable/bt_action_in"
+            android:textAllCaps="false"
+            android:textSize="25sp"
+            android:text="@string/bt_edit"
             android:textColor="@color/white"
             android:textStyle="bold"
-            tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck" />
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="100dp"
-            android:layout_gravity="bottom"
-            app:cardBackgroundColor="@color/gray" />
+            tools:ignore="VisualLintButtonSize,DuplicateSpeakableTextCheck,TextContrastCheck" />
 
     </LinearLayout>
 </ScrollView>

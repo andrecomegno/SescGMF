@@ -1,17 +1,20 @@
 package com.andrecomegno.sescgmf.authentication
 
 import android.graphics.Rect
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.databinding.FragmentNewRegisterBinding
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
+import com.andrecomegno.sescgmf.helper.initToolbar
 import com.andrecomegno.sescgmf.model.DataUser
 import com.andrecomegno.sescgmf.toast.ToastUtils
 import com.google.firebase.messaging.FirebaseMessaging
@@ -30,6 +33,7 @@ class NewRegister : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
         initClicks()
         keyboard()
         setupKeyboardVisibilityListener()
@@ -37,10 +41,6 @@ class NewRegister : Fragment() {
 
     private fun initClicks() {
         binding.btNewRegister.setOnClickListener{ validateDate() }
-
-        binding.btBack.setOnClickListener{
-            findNavController().navigate(R.id.action_newRegister_to_login)
-        }
     }
 
     private fun validateDate() {

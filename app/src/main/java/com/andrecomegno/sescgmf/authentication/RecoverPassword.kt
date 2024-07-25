@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.databinding.FragmentRecoverPasswordBinding
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
+import com.andrecomegno.sescgmf.helper.initToolbar
 import com.andrecomegno.sescgmf.toast.ToastUtils
 
 class RecoverPassword : Fragment() {
@@ -27,15 +28,12 @@ class RecoverPassword : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initToolbar(binding.toolbar)
         initClicks()
     }
 
     private fun initClicks() {
         binding.btSendRecover.setOnClickListener{ validateDate() }
-
-        binding.btBack.setOnClickListener{
-            findNavController().navigate(R.id.action_recoverPassword_to_login)
-        }
     }
 
     private fun validateDate() {

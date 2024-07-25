@@ -22,40 +22,31 @@
     <!-- HOME -->
     <string name="lb_hi_good_morning">Hi, good morning !</string>
     <string name="lb_lets_start_your_day_by_training">Let\'s start your day by training 💪</string>
-    <string name="lb_title_next_training">NEXT TRAINING</string>
-    <string name="lb_title_workouts_to_do_at_home">WORKOUTS TO DO AT HOME</string>
-    <string name="lb_home_tip_01"> Training focused on your goals</string>
-    <string name="lb_home_tip_02">Most current equipment</string>
-    <string name="lb_home_tip_03">A qualified team to serve you</string>
+    <string name="title_next_training">NEXT TRAINING</string>
+    <string name="title_workouts_to_do_at_home">WORKOUTS TO DO AT HOME</string>
+    <string name="tips_01"> Training focused on your goals</string>
+    <string name="tips_02">Most current equipment</string>
+    <string name="tips_03">A qualified team to serve you</string>
     <!-- PROFILE -->
-    <string name="lb_title_base_unit">Base unit:</string>
-    <string name="lb_title_registration">Registration:</string>
-    <string name="lb_title_account_sesc">Account Sesc</string>
-    <string name="lb_title_account_profile">Account Profile</string>
+    <string name="title_base_unit">Base unit:</string>
+    <string name="title_registration">Registration:</string>
+    <string name="title_account_sesc">Account Sesc</string>
+    <string name="title_edit_account" >Edit Account</string>
+    <string name="title_account_profile">Account Profile</string>
+    <string name="title_account_delete">Account Delete</string>
     <string name="lb_username">Username:</string>
     <string name="lb_e_mail">E-Mail:</string>
-    <string name="lb_title_linked_account">Linked Account</string>
+    <!-- SETTING -->
+    <string name="title_setting">Setting</string>
     <!-- LESSON -->
     <string name="lb_event_name">Event Name</string>
-    <string name="lb_title_event">New Event</string>
+    <string name="title_event">New Event</string>
     <string name="lb_enter_name_event">Enter a Name Event !</string>
     <string name="lb_select_date">00/00/0000</string>
     <string name="lb_add_new_event">Add new event</string>
-    <!-- CALENDAR -->
-    <string name="lb_calendar_month_year">August 2023</string>
-    <string name="lb_SUNDAY">SUM</string>
-    <string name="lb_MONDAY">MON</string>
-    <string name="lb_TUESDAY">TUE</string>
-    <string name="lb_WEDNESDAY">WED</string>
-    <string name="lb_THURSDAY">THUR</string>
-    <string name="lb_FRIDAY">FRI</string>
-    <string name="lb_SATURDAY">SAT</string>
-    <string name="emoji_smile_sunglasses">😎</string>
-    <string name="emoji_trophy">🏆</string>
-    <string name="emoji_hug">🤗</string>
     <!-- TRAINING -->
-    <string name="lb_title_training">Training</string>
-    <string name="lb_title_your_routine">Your Routine</string>
+    <string name="title_training">Training</string>
+    <string name="title_your_routine">Your Routine</string>
     <string name="tips_training">💡 - You can request a new workout or increase the duration of the current one</string>
     <string name="lb_see_other_training_options">SEE OTHER TRAINING OPTIONS</string>
     <string name="title_in_the_last_month">in the last month</string>
@@ -73,14 +64,18 @@
     <string name="bt_profile">profile</string>
     <string name="bt_lesson">lesson</string>
     <string name="bt_save">Save</string>
+    <string name="bt_edit">Edit</string>
     <string name="bt_login">Enter</string>
     <string name="bt_register">register</string>
     <string name="bt_recover_password">recover password ?</string>
-    <string name="bt_send">SEND</string>
+    <string name="bt_send">Send</string>
     <string name="bt_access_my_training">Access My Training</string>
     <string name="bt_start_training">Start Training</string>
     <string name="bt_delete_account">Delete Account</string>
     <string name="bt_new_event">New Event</string>
+    <string name="bt_button_bottom_sheet">Got it</string>
+    <!-- SHEET -->
+    <string name="title_bottom_sheet">Attention !</string>
     <!-- Error Firebase Authentication-->
     <string name="alert_invalid_email_password">Invalid email or password</string>
     <string name="alert_invalid_email_register_fragment">Enter a valid email.</string>
@@ -104,6 +99,7 @@
     <string name="alert_delete">Do you really want to delete a video classes?</string>
     <string name="alert_logout">Are you sure you want to log out of your account?</string>
     <string name="alert_error_save_edit">Error Save Edit !</string>
+    <string name="alert_edit_to_be_able_to_save">Edit to be able to save</string>
     <string name="alert_please_complete_all_fields_correctly">Please complete all fields correctly</string>
     <string name="alert_unknown">Unknown</string>
     <string name="alert_loading"> Loading…</string>
@@ -113,4 +109,6 @@
     <string name="alert_no_tokens_found">No tokens found !</string>
     <string name="alert_error_device_conflict">Login not permitted: The user is already logged in on another device.</string>
     <string name="alert_training_not_found">training not found</string>
+    <string name="alert_delete_account">Are you sure you want to delete your account?</string>
+    <string name="alert_image_removed">"image removed "</string>
 </resources>

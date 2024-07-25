@@ -6,13 +6,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.databinding.FragmentTrainingBinding
 import com.andrecomegno.sescgmf.home.MainActivity
 
 class Training : Fragment() {
     private var _binding: FragmentTrainingBinding? = null
     private val binding get() = _binding!!
+
+    companion object{
+        const val SELECT_A: String = "A"
+        const val SELECT_B: String = "B"
+        const val SELECT_C: String = "C"
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,16 +34,21 @@ class Training : Fragment() {
 
     private fun initClicks() {
         binding.btOptionA.setOnClickListener{
-            findNavController().navigate(R.id.action_training_to_myTraining)
+            val action = TrainingDirections.actionTrainingToMyTraining(SELECT_A)
+            findNavController().navigate(action)
         }
 
         binding.btOptionB.setOnClickListener{
-            findNavController().navigate(R.id.action_training_to_myTraining)
+            val action = TrainingDirections.actionTrainingToMyTraining(SELECT_B)
+            findNavController().navigate(action)
         }
 
         binding.btOptionC.setOnClickListener{
-            findNavController().navigate(R.id.action_training_to_myTraining)
+            val action = TrainingDirections.actionTrainingToMyTraining(SELECT_C)
+            findNavController().navigate(action)
         }
+
+        binding.trainingOptions.setOnClickListener {  }
     }
 
     override fun onResume() {

@@ -44,12 +44,12 @@ class MainActivity : AppCompatActivity() {
     // MAIN MENU
     fun hideBottomNavigationView() {
         // DESATIVA
-        binding.bottomNavigationView.visibility = View.GONE
+        binding.coordinatorLayout.visibility = View.GONE
     }
 
     fun showBottomNavigationView() {
         // HABILITA
-        binding.bottomNavigationView.visibility = View.VISIBLE
+        binding.coordinatorLayout.visibility = View.VISIBLE
     }
 
     private fun subscribeToTopic() {

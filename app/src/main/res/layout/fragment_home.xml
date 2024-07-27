@@ -84,16 +84,13 @@
                     app:cardBackgroundColor="@color/gray"
                     tools:ignore="TextSizeCheck">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="top|center"
                         android:layout_marginTop="15dp"
-                        android:text="TESTE"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        tools:ignore="RtlCompat" />
+                        android:src="@drawable/ic_emoji_heart"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -118,16 +115,13 @@
                     app:cardBackgroundColor="@color/gray"
                     tools:ignore="TextSizeCheck">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="top|center"
                         android:layout_marginTop="15dp"
-                        android:text="TESTE"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        tools:ignore="RtlCompat,TextContrastCheck" />
+                        android:src="@drawable/ic_emoji_star"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -151,16 +145,13 @@
                     android:layout_marginEnd="15dp"
                     app:cardBackgroundColor="@color/gray">
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top"
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="top|center"
                         android:layout_marginTop="15dp"
-                        android:text="TESTE"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:textSize="20sp"
-                        tools:ignore="RtlCompat" />
+                        android:src="@drawable/ic_emoji_cool"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -180,8 +171,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginTop="40dp"
+            android:layout_marginHorizontal="15dp"
             android:text="@string/title_next_training"
             android:textColor="@color/dark_gray"
             android:textSize="10sp"
@@ -193,10 +184,8 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="15dp"
-            android:background="@drawable/bt_training"
+            android:layout_marginHorizontal="15dp"
+            android:background="@drawable/bt_action_in"
             android:text="@string/bt_access_my_training"
             android:textColor="@color/white"
             android:textStyle="bold"
@@ -205,7 +194,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="10dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="50dp"
             android:layout_gravity="center"
             app:cardBackgroundColor="@color/gray" />
 
@@ -276,13 +265,5 @@
                     android:textColor="@color/white" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:layout_marginTop="75dp"
-            android:layout_gravity="bottom"
-            app:cardBackgroundColor="@color/gray" />
-
         </LinearLayout>
 </ScrollView>

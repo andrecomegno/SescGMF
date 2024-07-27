@@ -60,9 +60,9 @@
     <string name="lb_select_training_c">C</string>
     <!-- BUTTON  -->
     <string name="bt_home">home</string>
+    <string name="bt_reminder">reminder</string>
     <string name="bt_training">training</string>
     <string name="bt_profile">profile</string>
-    <string name="bt_lesson">lesson</string>
     <string name="bt_save">Save</string>
     <string name="bt_edit">Edit</string>
     <string name="bt_login">Enter</string>

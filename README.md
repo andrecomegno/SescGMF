@@ -1,8 +1,6 @@
 <p>
-  <a href="https://opensource.org/licenses/MIT">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT">   
-    <img src="https://img.shields.io/github/followers/andrecomegno.svg" alt="Followers">                                                                               
-  </a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT"></a>
+    <img src="https://img.shields.io/github/followers/andrecomegno.svg" alt="Followers">
 </p>
  
 # Introdução

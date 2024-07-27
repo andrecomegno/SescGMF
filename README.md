@@ -4,8 +4,6 @@
     <img src="https://img.shields.io/github/followers/andrecomegno.svg" alt="Followers">                                                                               
   </a>
 </p>
-
- #
  
 # Introdução
 O aplicativo SESC GMF foi desenvolvido como um proposta de venda para a instituição privada Serviço Social do Comércio, o aplicativo foi desenvolvido para a necessidade de atualizar e agilizar as aulas de Ginástica Multifuncional (GMF). O aplicativo SESC GMF foi desenvolvido na linguagem Kotlin com o banco de dados Firebase.

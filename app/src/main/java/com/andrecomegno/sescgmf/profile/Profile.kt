@@ -19,6 +19,7 @@ import com.andrecomegno.sescgmf.databinding.FragmentProfileBinding
 import com.andrecomegno.sescgmf.helper.BaseFragment
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
 import com.andrecomegno.sescgmf.helper.showBottomSheet
+import com.andrecomegno.sescgmf.home.MainActivity
 import com.andrecomegno.sescgmf.model.DataUser
 import com.github.dhaval2404.imagepicker.ImagePicker
 import com.google.firebase.auth.FirebaseAuth
@@ -173,6 +174,12 @@ class Profile : BaseFragment() {
                 findNavController().navigate(R.id.action_profile_to_authentication)
             }
         )
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // OCULTA O BottomNavigationView
+        (activity as MainActivity).showBottomNavigationView()
     }
 
     override fun onDestroyView() {

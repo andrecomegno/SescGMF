@@ -14,6 +14,7 @@ import com.andrecomegno.sescgmf.R
 import com.andrecomegno.sescgmf.databinding.FragmentSettingBinding
 import com.andrecomegno.sescgmf.helper.BaseFragment
 import com.andrecomegno.sescgmf.helper.FirebaseHelper
+import com.andrecomegno.sescgmf.helper.initToolbar
 import com.andrecomegno.sescgmf.helper.showBottomSheet
 import com.andrecomegno.sescgmf.home.MainActivity
 import com.andrecomegno.sescgmf.model.DataUser
@@ -38,6 +39,7 @@ class Setting : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initClicks()
+        initToolbar(binding.toolbar)
         getArgs()
         keyboard()
         setupKeyboardVisibilityListener()
